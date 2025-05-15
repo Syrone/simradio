@@ -1,0 +1,134 @@
+@use "../mixins" as mixins;
+
+.store {
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @include mixins.breakpoint-up(md) {
+      gap: 1.5rem;
+    }
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1.5rem;
+
+    @include mixins.breakpoint-up(md) {
+      grid-template-columns: 17.5rem minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: 24.75rem minmax(0, 1fr);
+      gap: 2.5rem;
+      background-color: var(--light);
+      border-radius: 1.75rem;
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .swiper {
+      align-self: flex-start;
+      margin-inline: calc(var(--container-offset) * -1);
+      padding-inline: var(--container-offset);
+      position: relative;
+
+      @include mixins.breakpoint-up(md) {
+        width: 100%;
+        margin-inline: 0;
+        padding-inline: 0;
+      }
+
+      &-button-prev,
+      &-button-next {
+        --_bg: var(--dark-rgba-15);
+        --_padding: 0.625rem;
+        --_icon-size: 1.25rem;
+
+        transform: translateY(-50%);
+
+        @include mixins.breakpoint-down(md) {
+          --swiper-navigation-sides-offset: var(--container-offset);
+        }
+      }
+    }
+
+    &-picture {
+
+      .image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: var(--light-300);
+        border-radius: 1rem;
+        object-fit: contain;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+
+      @include mixins.breakpoint-up(md) {
+        margin-top: 1rem;
+      }
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &-title {
+      margin-bottom: 1rem;
+    }
+
+    &-description {
+      font-size: var(--fs-md);
+      color: var(--text-color-200);
+    }
+
+    &-features {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 1.75rem 1.25rem;
+      margin-top: 2rem;
+
+      @include mixins.breakpoint-up(md) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    &-feature {
+      display: flex;
+      flex-direction: column;
+      gap: .625rem;
+
+      &-title {
+        font-size: var(--fs-sm);
+        font-weight: 600;
+        color: var(--primary);
+        text-transform: uppercase;
+      }
+
+      &-text {
+        font-size: var(--fs-md);
+        line-height: 1.5;
+      }
+    }
+
+    &-button {
+      min-width: 10rem;
+      margin-top: 2.25rem;
+      align-self: flex-end;
+
+      @include mixins.breakpoint-up(md) {
+        min-width: 7rem;
+        align-self: flex-start;
+      }
+    }
+  }
+}

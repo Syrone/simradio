@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'SimRadio'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Лучшие рации для использования охранными  предприятиями'})
+
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <div class="main-sections">
+        <section class="section hero">
+          <div class="hero-swiper">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                @loop('partials/slides/hero.html', [
+                  {
+                    title: 'Лучшие рации для использования охранными  предприятиями',
+                    subtitle: 'Надежная связь в любых условиях для обеспечения безопасности',
+                    image: 'image-1@2x'
+                  },
+                  {
+                    title: 'Лучшие рации для использования охранными  предприятиями',
+                    subtitle: 'Надежная связь в любых условиях для обеспечения безопасности',
+                    image: 'image-2@2x'
+                  },
+                  {
+                    title: 'Лучшие рации для использования охранными  предприятиями',
+                    subtitle: 'Надежная связь в любых условиях для обеспечения безопасности',
+                    image: 'image-1@2x'
+                  },
+                  {
+                    title: 'Лучшие рации для использования охранными  предприятиями',
+                    subtitle: 'Надежная связь в любых условиях для обеспечения безопасности',
+                    image: 'image-2@2x'
+                  },
+                ])
+              </div>
+            </div>
+            <button type="button" class="btn swiper-button-prev">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/swiper-arrow.svg#svg-swiper-arrow"></use>
+                </svg>
+              </span>
+            </button>
+            <button type="button" class="btn swiper-button-next">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/swiper-arrow.svg#svg-swiper-arrow"></use>
+                </svg>
+              </span>
+            </button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <section class="section features">
+          <span class="section-bg" style="background-image: url(img/features/decor@2x.webp);"></span>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h2 section-title">
+                Наши преимущества
+              </h2>
+            </div>
+
+            <div class="features-list">
+              @loop('partials/items/features.html', [
+                {
+                  image: 'radio',
+                  title: '<span>5</span> лет <br> служба радиостанций SimRadio',
+                },
+                {
+                  image: 'warranty',
+                  title: '<span>2</span> года <br> гарантии на радиостанции',
+                },
+                {
+                  image: 'delivery',
+                  title: '<span>24</span> часа <br> срок доставки после оплаты',
+                },
+                {
+                  image: 'achievement',
+                  title: '<span>20</span> лет <br> на рынке, с 2005 года',
+                },
+              ])
+          </div>
+        </section>
+
+        <section class="section store">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h2 section-title">
+                Наши радиостанции
+              </h2>
+            </div>
+
+            <div class="store-list">
+              @loop('partials/items/store.html', [
+                {
+                  image: 'image-1@2x',
+                  title: 'SimRadio Pro X5',
+                  description: '<p>Надежная радиостанция для профессионального и активного использования. Идеально подходит для охраны, стройки, логистики и туризма. Обеспечивает стабильную связь даже в сложных условиях благодаря мощному передатчику и продуманной электронике.</p><p>Прочный корпус, удобное управление и поддержка ключевых функций — экстренный вызов, шумоподавление, FM-радио, программируемые каналы. Работает долго без подзарядки и совместима с популярными аксессуарами. Pro X5 — выбор для тех, кому нужна уверенная связь и долговечность.</p>',
+                },
+                {
+                  image: 'image-2@2x',
+                  title: 'SimRadio Compact S3',
+                  description: '<p>Лёгкая и надёжная радиостанция, идеально подходящая для повседневного использования в городских условиях, на складе, в сфере обслуживания или во время активного отдыха.</p><p>Благодаря компактным размерам и малому весу, она удобно помещается в карман или крепится на ремень, не мешая при движении. Несмотря на скромные габариты, Compact S3 обеспечивает стабильную и качественную связь на значительных расстояниях, что делает её отличным выбором для тех, кому важна мобильность и надёжность.</p>',
+                },
+                {
+                  image: 'image-2@2x',
+                  title: 'SimRadio Tactical T7',
+                  description: '<p>Тактическая радиостанция, предназначенная для профессионального использования в условиях, требующих повышенной надёжности и безопасности связи. Её прочный корпус обеспечивает устойчивость к механическим повреждениям и воздействию окружающей среды, что делает её подходящей для эксплуатации в сложных условиях.</p><p>Устройство оснащено функцией шифрования, обеспечивающей защиту передаваемой информации от несанкционированного доступа. Дополнительные возможности, такие как программируемые каналы и совместимость с различными аксессуарами, позволяют адаптировать радиостанцию под специфические задачи пользователя.</p>',
+                },
+              ])
+            </div>
+
+            <div class="section-more">
+              <button type="button" class="btn">
+                Показать еще
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section scope">
+          <span class="section-bg desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
+          <span class="section-bg mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h2 section-title">
+                Области применения
+              </h2>
+            </div>
+
+            <div class="scope-list">
+              @loop('partials/items/scope.html', [
+                {
+                  image: 'image-1@2x',
+                  imageMobile: 'image-1@2x',
+                  title: 'Строительство',
+                },
+                {
+                  image: 'image-2@2x',
+                  imageMobile: 'image-2@2x',
+                  title: 'Служба охраны',
+                },
+                {
+                  image: 'image-3@2x',
+                  imageMobile: 'image-3@2x',
+                  title: 'Медицина',
+                },
+                {
+                  image: 'image-4@2x',
+                  imageMobile: 'image-4-mobile@2x',
+                  title: 'Государственные <br> структуры',
+                },
+                {
+                  image: 'image-5@2x',
+                  imageMobile: 'image-5@2x',
+                  title: 'Сельское хозяйство',
+                },
+              ])
+            </div>
+          </div>
+        </section>
+
+        <section class="section"></section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

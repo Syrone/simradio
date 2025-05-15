@@ -1,0 +1,12 @@
+.brand {
+  max-width: 13rem;
+
+  &-picture {
+
+    .image {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

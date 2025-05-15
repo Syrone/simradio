@@ -1,0 +1,58 @@
+@use "mixins" as mixins;
+
+.section {
+  --_offset: 3rem;
+
+  @include mixins.breakpoint-up(lg) {
+    --_offset: 5rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: var(--_offset);
+  }
+
+  &-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+	&-header {
+    margin-bottom: 2rem;
+	}
+
+	&-title,
+	&-subtitle {
+		text-transform: uppercase;
+	}
+
+	&-title {
+
+		+ .section-subtitle {
+			margin-top: 1rem;
+		}
+	}
+
+	&-subtitle {
+		font-size: 1.5rem;
+	}
+
+  &-more {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      --_fs: var(--fs-md);
+      --_fw: 500;
+      --_color: var(--text-color-200);
+
+      text-decoration: underline;
+      text-underline-offset: .25em;
+      text-transform: uppercase;
+    }
+  }
+}

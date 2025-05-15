@@ -1,0 +1,22 @@
+// базовые подключения
+@use "vars";
+@use "fonts";
+@use "settings";
+
+// подключения компонентов страницы
+@use "./components/utilities";
+@use "./components/containers";
+@use "./components/section";
+@use "./components/icons";
+@use "./components/buttons";
+@use "./components/field-control";
+@use "./components/form-check";
+@use "./components/brand";
+@use "./components/header";
+@use "./components/hero";
+@use "./components/features";
+@use "./components/store";
+@use "./components/scope";
+@use "./components/swiper";
+@use "./components/offcanvas";
+@use "./components/typography";

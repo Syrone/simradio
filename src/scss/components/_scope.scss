@@ -1,0 +1,135 @@
+@use "mixins" as mixins;
+
+.scope {
+  color: var(--light);
+  padding-block: 3.375rem;
+  position: relative;
+  z-index: 1;
+
+  @include mixins.breakpoint-up(lg) {
+    margin-inline: var(--container-offset);
+    border-radius: 2rem;
+    padding-block: 5rem;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--primary-200);
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  .section-header {
+
+    @include mixins.breakpoint-up(lg) {
+      text-align: center;
+    }
+  }
+
+  .section-bg {
+    opacity: .2;
+
+    &.desktop {
+      @include mixins.breakpoint-down(md) {
+        background-image: none !important;
+      }
+    }
+
+    &.mobile {
+      @include mixins.breakpoint-up(md) {
+        background-image: none !important;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+    @include mixins.breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-item {
+    min-height: 14.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    &-bg {
+      border-radius: inherit;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+
+      &.desktop {
+        @include mixins.breakpoint-down(md) {
+          background-image: none !important;
+        }
+      }
+
+      &.mobile {
+        @include mixins.breakpoint-up(md) {
+          background-image: none !important;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background-image: linear-gradient(45deg, var(--primary-800) 0%, rgba(0, 0, 0, 0) 80%);
+        border-radius: inherit;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+    }
+
+    &-title {
+      font-size: var(--fs-base);
+      font-weight: 500;
+      text-transform: initial;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+
+      @include mixins.breakpoint-up(md) {
+        grid-row: span 2;
+        order: initial;
+      }
+
+      @include mixins.breakpoint-up(lg) {
+        grid-row: initial;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: span 2;
+
+      @include mixins.breakpoint-up(md) {
+        grid-column: initial;
+      }
+    }
+
+    &:last-child {
+      order: 2;
+    }
+  }
+}

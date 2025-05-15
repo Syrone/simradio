@@ -1,0 +1,52 @@
+<header class="header">
+  <div class="container">
+    @include('brand.html')
+
+    <nav class="header-nav"
+      data-transfer-origin="header-nav"
+      data-transfer-breakpoint="991.98">
+      <button type="button" class="btn header-nav-link">
+        Главная
+      </button>
+      <button type="button" class="btn header-nav-link">
+        Продукция
+      </button>
+      <button type="button" class="btn header-nav-link">
+        Применение
+      </button>
+      <button type="button" class="btn header-nav-link">
+        О нac
+      </button>
+      <button type="button" class="btn header-nav-link">
+        Сертификаты
+      </button>
+      <button type="button" class="btn header-nav-link">
+        Где купить
+      </button>
+    </nav>
+
+    <a href="tel:+88003010607" class="btn btn-icon header-phone">
+      <span>
+        <span>8 800 301-06-07</span>
+        <span>Заказать обратный звонок</span>
+      </span>
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
+        </svg>
+      </span>
+    </a>
+
+    <button type="button" class="btn btn-icon header-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-menu"
+      aria-controls="Навигационное меню">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>

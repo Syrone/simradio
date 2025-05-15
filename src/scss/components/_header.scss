@@ -1,0 +1,100 @@
+@use "mixins" as mixins;
+
+.header {
+  width: 100%;
+  background-color: var(--light-rgba-60);
+  padding-block: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    @include mixins.breakpoint-up(xl) {
+      gap: 2.25rem;
+    }
+
+    &-link {
+      --_fs: var(--fs-md);
+      --_color: #000;
+    }
+  }
+
+  &-phone {
+    order: -1;
+
+    @include mixins.breakpoint-up(lg) {
+      --_fs: .8125rem;
+      --_fw: 400;
+      --_color: #000;
+      --_bg: transparent;
+      --_rounded: 0rem;
+      --_padding: 0rem;
+
+      --_color-hover: var(--primary-500);
+      --_bg-hover: transparent;
+
+      --_color-active: var(--primary-500);
+      --_bg-active: transparent;
+
+      text-align: start;
+      order: 2;
+    }
+
+    > span {
+
+      &:first-child {
+        display: none;
+
+        @include mixins.breakpoint-up(lg) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      > span {
+
+        &:first-child {
+
+          @include mixins.breakpoint-up(lg) {
+            font-size: 1.3125rem;
+            font-weight: 600;
+          }
+        }
+
+        &:last-child {
+
+          @include mixins.breakpoint-up(lg) {
+            color: var(--primary);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .icon {
+
+      @include mixins.breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &-menu {
+
+    @include mixins.breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
