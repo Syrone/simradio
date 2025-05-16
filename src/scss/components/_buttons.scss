@@ -109,14 +109,16 @@ a.btn {
 
 	display: inline;
 	text-transform: initial;
+  text-decoration: underline;
+  text-underline-offset: .25em;
 }
 
 .btn-icon {
   --_color: var(--primary);
   --_bg: var(--light-200);
   --_rounded: .5rem;
-  --_padding: .625rem;
-  --_icon-size: 2.25rem;
+  --_padding: .875rem;
+  --_icon-size: 1.75rem;
 
   --_color-hover: var(--light);
   --_bg-hover: var(--primary-500);
@@ -128,8 +130,19 @@ a.btn {
 .btn-lg {
 	--_height: 3rem;
 	--_fs: var(--fs-md);
+  --_fw: 500;
 	--_rounded: 2rem;
 	--_padding: .25rem 1.5rem;
+}
+
+.btn-xl {
+	--_height: 3.5rem;
+	--_fs: var(--fs-md);
+  --_fw: 600;
+	--_rounded: 2.5rem;
+	--_padding: .25rem 3rem;
+
+  text-transform: uppercase;
 }
 
 .btn-primary-gradient {
@@ -175,6 +188,53 @@ a.btn {
 
     &::after {
       opacity: 0;
+    }
+  }
+}
+
+.btn-light-100 {
+  --_color: var(--text-color);
+  --_bg: var(--light-100);
+
+  --_color-hover: var(--light);
+  --_bg-hover: var(--primary-500);
+
+  --_color-active: var(--light);
+  --_bg-active: var(--primary-500);
+
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    opacity: 0;
+    background-image: var(--primary-gradient);
+    border-radius: inherit;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    transition-property: opacity;
+    transition-duration: var(--_transition-duration);
+    transition-timing-function: var(--_transition-timing-function);
+  }
+
+  @media (hover: hover) {
+    &:is(:hover, :focus-visible) {
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:is(:active, .is-active) {
+
+    &::after {
+      opacity: 1;
     }
   }
 }

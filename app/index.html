@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body class="page-body">
@@ -39,27 +40,29 @@
     <nav class="header-nav"
       data-transfer-origin="header-nav"
       data-transfer-breakpoint="991.98">
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="hero">
         Главная
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="store">
         Продукция
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="scope">
         Применение
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="about">
         О нac
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="certificates">
         Сертификаты
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="contacts">
         Где купить
       </button>
     </nav>
 
-    <a href="tel:+88003010607" class="btn btn-icon header-phone">
+    <button type="button" class="btn btn-icon header-phone"
+      data-bs-toggle="modal"
+      data-bs-target="#form-callback">
       <span>
         <span>8 800 301-06-07</span>
         <span>Заказать обратный звонок</span>
@@ -70,7 +73,7 @@
           <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
         </svg>
       </span>
-    </a>
+    </button>
 
     <button type="button" class="btn btn-icon header-menu"
       data-bs-toggle="offcanvas"
@@ -87,7 +90,7 @@
 
     <main class="main">
       <div class="main-sections">
-        <section class="section hero">
+        <section class="section hero" id="hero">
           <div class="hero-swiper">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -229,17 +232,18 @@
 
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Наши преимущества
               </h2>
             </div>
 
             <div class="features-list">
               <article class="features-item">
-  <picture class="features-item-picture">
-    <source srcset="img/features/radio.webp" type="image/webp">
-    <img loading="lazy" src="img/features/radio.png" class="image" width="" height="" alt="">
-  </picture>
+  <span class="icon features-item-icon">
+    <svg>
+      <use xlink:href="img/icons/radio.svg#svg-radio"></use>
+    </svg>
+  </span>
   <div class="features-item-content">
     <h3 class="features-item-title">
       <span>5</span> лет <br> служба радиостанций SimRadio
@@ -247,10 +251,11 @@
   </div>
 </article>
 <article class="features-item">
-  <picture class="features-item-picture">
-    <source srcset="img/features/warranty.webp" type="image/webp">
-    <img loading="lazy" src="img/features/warranty.png" class="image" width="" height="" alt="">
-  </picture>
+  <span class="icon features-item-icon">
+    <svg>
+      <use xlink:href="img/icons/warranty.svg#svg-warranty"></use>
+    </svg>
+  </span>
   <div class="features-item-content">
     <h3 class="features-item-title">
       <span>2</span> года <br> гарантии на радиостанции
@@ -258,10 +263,11 @@
   </div>
 </article>
 <article class="features-item">
-  <picture class="features-item-picture">
-    <source srcset="img/features/delivery.webp" type="image/webp">
-    <img loading="lazy" src="img/features/delivery.png" class="image" width="" height="" alt="">
-  </picture>
+  <span class="icon features-item-icon">
+    <svg>
+      <use xlink:href="img/icons/delivery.svg#svg-delivery"></use>
+    </svg>
+  </span>
   <div class="features-item-content">
     <h3 class="features-item-title">
       <span>24</span> часа <br> срок доставки после оплаты
@@ -269,10 +275,11 @@
   </div>
 </article>
 <article class="features-item">
-  <picture class="features-item-picture">
-    <source srcset="img/features/achievement.webp" type="image/webp">
-    <img loading="lazy" src="img/features/achievement.png" class="image" width="" height="" alt="">
-  </picture>
+  <span class="icon features-item-icon">
+    <svg>
+      <use xlink:href="img/icons/achievement.svg#svg-achievement"></use>
+    </svg>
+  </span>
   <div class="features-item-content">
     <h3 class="features-item-title">
       <span>20</span> лет <br> на рынке, с 2005 года
@@ -283,10 +290,10 @@
           </div>
         </section>
 
-        <section class="section store">
+        <section class="section store" id="store">
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Наши радиостанции
               </h2>
             </div>
@@ -588,13 +595,13 @@
           </div>
         </section>
 
-        <section class="section scope">
+        <section class="section scope" id="scope">
           <span class="section-bg desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
           <span class="section-bg mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
 
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Области применения
               </h2>
             </div>
@@ -640,8 +647,467 @@
           </div>
         </section>
 
-        <section class="section"></section>
+        <section class="section about" id="about">
+          <div class="container">
+            <div class="about-content">
+              <div class="section-header">
+                <h2 class="section-title">
+                  О производителе
+                </h2>
+              </div>
+              <div class="about-text">
+                <p>
+                  Компания SimRadio занимается разработкой и производством радиооборудования профессионального и любительского класса. При изготовлении наших раций используются прочные материалы, устойчивые к механическим повреждениям и с защитой от влаги.
+                </p>
+                <p>
+                  Базовое оборудование и системы радиосвязи разрабатываются в лаборатории в Московской области, производство и сборка продукции перенесены в Китай с целью снижения
+                </p>
+              </div>
+            </div>
+            <div class="about-picture">
+              <picture>
+                <source srcset="img/about/image-1@2x.webp" type="image/webp">
+                <img loading="lazy" src="img/about/image-1@2x.jpg" class="image" width="633" height="400" alt="Картинка">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="section certificates" id="certificates">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Сертификаты
+              </h2>
+            </div>
+
+            <div class="certificates-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+  <div class="certificates-slide">
+    <picture class="certificates-picture">
+      <source srcset="img/certificates/image-1@2x.webp" type="image/webp">
+      <img loading="lazy" src="img/certificates/image-1@2x.jpg" class="image" width="316" height="407" alt="Сертификат">
+    </picture>
+    <h3 class="certificates-title">
+      ISO 9001:2015
+    </h3>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="certificates-slide">
+    <picture class="certificates-picture">
+      <source srcset="img/certificates/image-2@2x.webp" type="image/webp">
+      <img loading="lazy" src="img/certificates/image-2@2x.jpg" class="image" width="327" height="235" alt="Сертификат">
+    </picture>
+    <h3 class="certificates-title">
+      EAC
+    </h3>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="certificates-slide">
+    <picture class="certificates-picture">
+      <source srcset="img/certificates/image-3@2x.webp" type="image/webp">
+      <img loading="lazy" src="img/certificates/image-3@2x.jpg" class="image" width="281" height="399" alt="Сертификат">
+    </picture>
+    <h3 class="certificates-title">
+      Минцифры РФ
+    </h3>
+  </div>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section partners">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                партнеры
+              </h2>
+            </div>
+
+            <div class="partners-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+  <picture class="partners-picture">
+    <source srcset="img/partners/image-1@2x.webp" type="image/webp">
+    <img loading="lazy" src="img/partners/image-1@2x.png" class="image" width="225" height="104" alt="Партнер">
+  </picture>
+</div>
+<div class="swiper-slide">
+  <picture class="partners-picture">
+    <source srcset="img/partners/image-2@2x.webp" type="image/webp">
+    <img loading="lazy" src="img/partners/image-2@2x.png" class="image" width="225" height="104" alt="Партнер">
+  </picture>
+</div>
+<div class="swiper-slide">
+  <picture class="partners-picture">
+    <source srcset="img/partners/image-3@2x.webp" type="image/webp">
+    <img loading="lazy" src="img/partners/image-3@2x.png" class="image" width="225" height="104" alt="Партнер">
+  </picture>
+</div>
+<div class="swiper-slide">
+  <picture class="partners-picture">
+    <source srcset="img/partners/image-4@2x.webp" type="image/webp">
+    <img loading="lazy" src="img/partners/image-4@2x.png" class="image" width="225" height="104" alt="Партнер">
+  </picture>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contacts" id="contacts">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Где купить
+              </h2>
+            </div>
+
+            <div class="tabs contacts-tabs">
+              <div class="contacts-content">
+                <nav class="tabs-nav">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button is-active">
+                    Москва
+                  </button>
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                    Санкт-Петербург
+                  </button>
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                    Екатеринбург
+                  </button>
+                </nav>
+                <div class="tabs-content">
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      <li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      ул. Радиотехническая, д. 15, офис 203
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Email
+          </span>
+          <a href="mailto:msk@simradio.ru" class="btn contacts-list-sublist-item-link">
+            msk@simradio.ru
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+<li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      Ленинградское шоссе, д. 80, строение 1
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+
+                    </ul>
+                  </div>
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      <li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      ул. Радиотехническая, д. 15, офис 203
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+<li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      Ленинградское шоссе, д. 80, строение 1
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Email
+          </span>
+          <a href="mailto:msk@simradio.ru" class="btn contacts-list-sublist-item-link">
+            msk@simradio.ru
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+
+                    </ul>
+                  </div>
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      <li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      ул. Радиотехническая, д. 15, офис 203
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+<li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      Ленинградское шоссе, д. 80, строение 1
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 495 123-45-67
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-map">
+                <div class="tabs-content">
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
+      <div role="dialog" class="modal fade" tabindex="-1"
+  id="form-callback"
+  aria-labelledby="form-callback-label"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h2 class="h3 modal-title" id="form-callback-label">
+          Оставить заявку на обратный звонок
+        </h2>
+
+        <button type="button" class="btn btn-close"
+          data-bs-dismiss="modal">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-body">
+          <label class="field-control">
+            <input type="text" class="field" name="name" required>
+            <span class="field-control-label">
+              Введите Ваше имя
+            </span>
+            <span class="icon field-control-icon">
+              <svg>
+                <use xlink:href="img/icons/user.svg#svg-user"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="field-control">
+            <input type="tel" class="field" name="phone" required>
+            <span class="field-control-label">
+              Введите Ваш телефон
+            </span>
+            <span class="icon field-control-icon">
+              <svg>
+                <use xlink:href="img/icons/phone-outline-2.svg#svg-phone-outline-2"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="form-footer">
+          <p class="form-hint">
+            Нажимая кнопку «Перезвоните мне», <br>
+            Вы соглашаетесь на <button type="button" class="btn btn-inherit" data-bs-toggle="modal" data-bs-target="#policy" data-bs-dismiss="modal">обработку персональных данных</button>
+          </p>
+
+          <button type="submit" class="btn btn-xl btn-primary-gradient">
+            перезвоните мне
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div role="dialog" class="modal modal-policy fade" tabindex="-1"
+  id="policy"
+  aria-labelledby="policy-label"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h2 class="h3 modal-title" id="policy-label">
+          Текст соглашения на обработку данных:
+        </h2>
+
+        <button type="button" class="btn btn-close"
+          data-bs-dismiss="modal">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года Вы подтверждаете свое согласие на обработку компанией ООО «Радиостандарт» персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу исключительно в целях продажи программного обеспечения на Ваше имя, как это описано ниже, блокирование, обезличивание, уничтожение.
+        </p>
+        <p>
+          Компания ООО «Радиостандарт» гарантирует конфиденциальность получаемой информации. Обработка персональных данных осуществляется в целях эффективного исполнения заказов, договоров и иных обязательств, принятых компанией ООО «Радиостандарт» в качестве обязательных к исполнению.
+        </p>
+        <p>
+          В случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или реселлеру программного обеспечения в целях регистрации программного обеспечения на ваше имя, вы даёте согласие на передачу ваших персональных данных. Компания ООО «Радиостандарт» гарантирует, что правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных данных на условиях, аналогичных изложенным в Политике конфиденциальности персональных данных.
+        </p>
+        <p>
+          Настоящее согласие распространяется на следующие Ваши персональные данные: фамилия, имя и отчество, адрес электронной почты, почтовый адрес доставки заказов, контактный телефон, платёжные реквизиты.
+        </p>
+        <p>
+          Срок действия согласия является неограниченным. Вы можете в любой момент отозвать настоящее согласие, направив письменное уведомления на адрес: 121087, г. Москва, ул. Барклая д. 8, офис 446 с пометкой «Отзыв согласия на обработку персональных данных».
+        </p>
+        <p>
+          Обращаем ваше внимание, что отзыв согласия на обработку персональных данных влечёт за собой удаление Вашей учётной записи с Интернет-сайта (http://рации.рф), а также уничтожение записей, содержащих ваши персональные данные, в системах обработки персональных данных компании ООО «Радиостандарт», что может сделать невозможным пользование интернет-сервисами компании ООО «Радиостандарт»
+        </p>
+        <p>
+          Гарантирую, что представленная мной информация является полной, точной и достоверной, а также что при представлении информации не нарушаются действующее законодательство Российской Федерации, законные права и интересы третьих лиц. Вся представленная информация заполнена мною в отношении себя лично.
+        </p>
+        <p>
+          Настоящее согласие действует в течение всего периода хранения персональных данных, если иное не предусмотрено законодательством Российской Федерации.
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
 
       <div class="offcanvas offcanvas-menu offcanvas-end" tabindex="-1" id="offcanvas-menu">
   <div class="offcanvas-header">
@@ -669,7 +1135,160 @@
     </main>
 
     <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-header">
+        <div class="footer-header-contacts"
+          data-transfer-target="footer-header-contacts">
+          <div class="footer-brand">
+            <a href="#" class="btn brand">
+  <picture class="brand-picture">
+    <source srcset="./img/logo@2x.webp" type="image/webp">
+    <img loading="lazy" src="./img/logo@2x.png" class="image" width="208" height="58" alt="SimRadio">
+  </picture>
+</a>
+
+          </div>
+        </div>
+
+        <p class="footer-description">
+          Разработка и производство профессионального радиооборудования с 2005 года.
+        </p>
+      </div>
+
+      <nav class="footer-nav">
+        <ul class="list-reset footer-list">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Контакты
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+                <svg>
+                  <use xlink:href="img/icons/location.svg#svg-location"></use>
+                </svg>
+              </span>
+              <span class="text">г. Москва, ул. Радиотехническая, д. 15, офис 203</span>
+            </div>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74951234567" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
+                <svg>
+                  <use xlink:href="img/icons/phone.svg#svg-phone"></use>
+                </svg>
+              </span>
+              <span class="text">+7 495 123-45-67</span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="mailto:info@simradio.ru" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/email.svg#svg-email)">
+                <svg>
+                  <use xlink:href="img/icons/email.svg#svg-email"></use>
+                </svg>
+              </span>
+              <span class="text">info@simradio.ru</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="list-reset footer-list">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Сервисный центр
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+                <svg>
+                  <use xlink:href="img/icons/location.svg#svg-location"></use>
+                </svg>
+              </span>
+              <span class="text">г. Москва, ул. Сервисная, д. 10</span>
+            </div>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
+                <svg>
+                  <use xlink:href="img/icons/phone.svg#svg-phone"></use>
+                </svg>
+              </span>
+              <span class="text">+7 495 765-43-21</span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/time.svg#svg-time)">
+                <svg>
+                  <use xlink:href="img/icons/time.svg#svg-time"></use>
+                </svg>
+              </span>
+              <span class="text">Режим работы: Пн-Пт, 9:00–18:00</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="list-reset footer-list footer-contacts"
+          data-transfer-origin="footer-header-contacts"
+          data-transfer-breakpoint="991.98">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Мы в соцсетях
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-contacts-link">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/insta.svg#svg-insta"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-contacts-link">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/youtube.svg#svg-youtube"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2025 SimRadio. Вce права защищены.
+      </p>
+
+      <nav class="footer-bottom-nav">
+        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+          Политика конфиденциальности
+        </a>
+        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+          Юридическая информация
+        </a>
+
+        <p class="footer-bottom-text">
+          <picture class="footer-bottom-text-logo">
+            <source srcset="img/logo-2@2x.webp" type="image/webp">
+            <img loading="lazy" src="img/logo-2@2x.png" class="image" width="34" height="34" alt="Логотип ЭДД-Ю">
+          </picture>
+
+          <span class="text">
+            Разработка и <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-inherit">поддержка</a> — компания ЭДД-Ю
+          </span>
+        </p>
+      </nav>
+    </div>
+  </div>
 </footer>
 
   </div>

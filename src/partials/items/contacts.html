@@ -1,0 +1,37 @@
+<li class="contacts-list-item">
+  <div class="contacts-list-item-icon">
+    <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+      <svg>
+        <use xlink:href="img/icons/location.svg#svg-location"></use>
+      </svg>
+    </span>
+  </div>
+  <div class="contacts-list-item-body">
+    <div class="contacts-list-item-header">
+      @address
+    </div>
+    <ul class="list-reset contacts-list-sublist">
+      @if (phone) {
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Телефон
+          </span>
+          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+            +7 (495) 123-45-67
+          </a>
+        </li>
+      }
+
+      @if (email) {
+        <li class="contacts-list-sublist-item">
+          <span class="contacts-list-sublist-item-name">
+            Email
+          </span>
+          <a href="mailto:msk@simradio.ru" class="btn contacts-list-sublist-item-link">
+            msk@simradio.ru
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</li>

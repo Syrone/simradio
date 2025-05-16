@@ -6,6 +6,7 @@
 // подключения компонентов страницы
 @use "./components/utilities";
 @use "./components/containers";
+@use "./components/typography";
 @use "./components/section";
 @use "./components/icons";
 @use "./components/buttons";
@@ -17,6 +18,12 @@
 @use "./components/features";
 @use "./components/store";
 @use "./components/scope";
+@use "./components/about";
+@use "./components/certificates";
+@use "./components/partners";
+@use "./components/contacts";
+@use "./components/footer";
 @use "./components/swiper";
+@use "./components/tabs";
 @use "./components/offcanvas";
-@use "./components/typography";
+@use "./components/modal";

@@ -1,3 +1,150 @@
 <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-header">
+        <div class="footer-header-contacts"
+          data-transfer-target="footer-header-contacts">
+          <div class="footer-brand">
+            @include('brand.html')
+          </div>
+        </div>
+
+        <p class="footer-description">
+          Разработка и производство профессионального радиооборудования с 2005 года.
+        </p>
+      </div>
+
+      <nav class="footer-nav">
+        <ul class="list-reset footer-list">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Контакты
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+                <svg>
+                  <use xlink:href="img/icons/location.svg#svg-location"></use>
+                </svg>
+              </span>
+              <span class="text">г. Москва, ул. Радиотехническая, д. 15, офис 203</span>
+            </div>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74951234567" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
+                <svg>
+                  <use xlink:href="img/icons/phone.svg#svg-phone"></use>
+                </svg>
+              </span>
+              <span class="text">+7 (495) 123-45-67</span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="mailto:info@simradio.ru" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/email.svg#svg-email)">
+                <svg>
+                  <use xlink:href="img/icons/email.svg#svg-email"></use>
+                </svg>
+              </span>
+              <span class="text">info@simradio.ru</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="list-reset footer-list">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Сервисный центр
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
+                <svg>
+                  <use xlink:href="img/icons/location.svg#svg-location"></use>
+                </svg>
+              </span>
+              <span class="text">г. Москва, ул. Сервисная, д. 10</span>
+            </div>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-list-link">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
+                <svg>
+                  <use xlink:href="img/icons/phone.svg#svg-phone"></use>
+                </svg>
+              </span>
+              <span class="text">+7 (495) 765-43-21</span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <div class="footer-list-text">
+              <span class="icon icon-gradient" style="mask-image: url(img/icons/time.svg#svg-time)">
+                <svg>
+                  <use xlink:href="img/icons/time.svg#svg-time"></use>
+                </svg>
+              </span>
+              <span class="text">Режим работы: Пн-Пт, 9:00-18:00</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="list-reset footer-list footer-contacts"
+          data-transfer-origin="footer-header-contacts"
+          data-transfer-breakpoint="991.98">
+          <li class="footer-list-item">
+            <h3 class="footer-list-title">
+              Мы в соцсетях
+            </h3>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-contacts-link">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/insta.svg#svg-insta"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="tel:+74957654321" class="btn footer-contacts-link">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/youtube.svg#svg-youtube"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2025 SimRadio. Вce права защищены.
+      </p>
+
+      <nav class="footer-bottom-nav">
+        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+          Политика конфиденциальности
+        </a>
+        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+          Юридическая информация
+        </a>
+
+        <p class="footer-bottom-text">
+          <picture class="footer-bottom-text-logo">
+            <source srcset="img/logo-2@2x.webp" type="image/webp">
+            <img loading="lazy" src="img/logo-2@2x.png" class="image" width="34" height="34" alt="Логотип ЭДД-Ю">
+          </picture>
+
+          <span class="text">
+            Разработка и <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-inherit">поддержка</a> - компания ЭДД-Ю
+          </span>
+        </p>
+      </nav>
+    </div>
+  </div>
 </footer>

@@ -1,0 +1,15 @@
+.tabs {
+
+  &-nav {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
+
+.tabs-pane {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

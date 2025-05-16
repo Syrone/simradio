@@ -36,26 +36,19 @@
       box-shadow: var(--shadow);
     }
 
-    &-picture {
-      width: 5rem;
-      height: 5rem;
-      display: block;
+    &-icon {
+      --_size: 5rem;
+      --_color: var(--light);
+
       background-image: var(--primary-gradient);
       border-radius: 1rem;
       padding: 1.375rem;
 
       @include mixins.breakpoint-up(lg) {
-        width: 4.25rem;
-        height: 4.25rem;
+        --_size: 4.25rem;
+
         padding: 1rem;
         align-self: end;
-      }
-
-      .image {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: contain;
       }
     }
 

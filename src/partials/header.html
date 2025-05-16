@@ -5,27 +5,29 @@
     <nav class="header-nav"
       data-transfer-origin="header-nav"
       data-transfer-breakpoint="991.98">
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="hero">
         Главная
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="store">
         Продукция
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="scope">
         Применение
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="about">
         О нac
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="certificates">
         Сертификаты
       </button>
-      <button type="button" class="btn header-nav-link">
+      <button type="button" class="btn header-nav-link" data-scrollto="contacts">
         Где купить
       </button>
     </nav>
 
-    <a href="tel:+88003010607" class="btn btn-icon header-phone">
+    <button type="button" class="btn btn-icon header-phone"
+      data-bs-toggle="modal"
+      data-bs-target="#form-callback">
       <span>
         <span>8 800 301-06-07</span>
         <span>Заказать обратный звонок</span>
@@ -36,7 +38,7 @@
           <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
         </svg>
       </span>
-    </a>
+    </button>
 
     <button type="button" class="btn btn-icon header-menu"
       data-bs-toggle="offcanvas"

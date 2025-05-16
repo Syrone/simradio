@@ -18,12 +18,15 @@
 
   --h1: 2.75rem;
   --h2: 1.75rem;
-  --h3: 2.625rem;
+  --h3: 1.5rem;
   --h5: 1.5rem;
 
   // colors
   --text-color: #151b1a;
+  --text-color-rgba-10: rgba(21, 27, 26, .10);
   --text-color-rgba-30: rgba(21, 27, 26, .30);
+  --text-color-rgba-60: rgba(21, 27, 26, .60);
+  --text-color-rgba-70: rgba(21, 27, 26, .70);
   --text-color-200: #484c4b;
   --text-color-400: #1f2937;
   --primary: #cb524d;
@@ -32,12 +35,16 @@
   --primary-500: #b8352f;
   --primary-800: #7d2a25;
   --light: #fff;
+  --light-100: #f1f1f1;
   --light-200: #f3f3f3;
   --light-300: #f5f5f5;
   --light-rgba-60: rgba(255, 255, 255, .60);
   --light-rgba-80: rgba(255, 255, 255, .80);
+  --dark: #000;
   --dark-rgba-15: rgba(0, 0, 0, .15);
   --dark-rgba-25: rgba(0, 0, 0, .25);
+  --dark-rgba-50: rgba(0, 0, 0, .50);
+  --dark-rgba-60: rgba(0, 0, 0, .60);
   --gray: #808080;
 
   // backgrounds
@@ -65,7 +72,7 @@
 
     --h1: 3.375rem;
     --h2: 3rem;
-    // --h3: 2.625rem;
+    --h3: 2.625rem;
     // --h5: 1.5rem;
   }
 }

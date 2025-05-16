@@ -1,0 +1,52 @@
+@use "mixins" as mixins;
+
+.about {
+
+  > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+
+    @include mixins.breakpoint-up(md) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, .75fr);
+      gap: initial;
+    }
+
+    @include mixins.breakpoint-up(xl) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &-content {
+
+    @include mixins.breakpoint-up(md) {
+      padding-right: 2rem;
+    }
+
+    @include mixins.breakpoint-up(lg) {
+      padding-right: 3.25rem;
+    }
+
+    .section-header {
+      margin-bottom: .75rem;
+    }
+  }
+
+  &-text {
+    font-size: var(--fs-md);
+
+    @include mixins.breakpoint-up(lg) {
+      font-size: var(--fs-base);
+    }
+  }
+
+  &-picture {
+
+    .image {
+      width: 100%;
+      display: block;
+      border-radius: 1.5rem;
+    }
+  }
+}

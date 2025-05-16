@@ -1,0 +1,16 @@
+@use "mixins" as mixins;
+
+.partners {
+  overflow: hidden;
+
+  .swiper {
+    overflow: initial;
+  }
+
+  &-picture {
+
+    .image {
+      display: block;
+    }
+  }
+}

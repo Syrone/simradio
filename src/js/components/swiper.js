@@ -49,3 +49,35 @@ document.querySelectorAll('.store-item')?.forEach(container => {
     },
   })
 })
+
+document.querySelectorAll('.certificates-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+  })
+})
+document.querySelectorAll('.partners-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 4,
+    spaceBetween: 32,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 2.5,
+        spaceBetween: 48,
+      },
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 48,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
+  })
+})

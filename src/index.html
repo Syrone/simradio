@@ -11,7 +11,7 @@
 
     <main class="main">
       <div class="main-sections">
-        <section class="section hero">
+        <section class="section hero" id="hero">
           <div class="hero-swiper">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -62,7 +62,7 @@
 
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Наши преимущества
               </h2>
             </div>
@@ -70,29 +70,29 @@
             <div class="features-list">
               @loop('partials/items/features.html', [
                 {
-                  image: 'radio',
+                  icon: 'radio',
                   title: '<span>5</span> лет <br> служба радиостанций SimRadio',
                 },
                 {
-                  image: 'warranty',
+                  icon: 'warranty',
                   title: '<span>2</span> года <br> гарантии на радиостанции',
                 },
                 {
-                  image: 'delivery',
+                  icon: 'delivery',
                   title: '<span>24</span> часа <br> срок доставки после оплаты',
                 },
                 {
-                  image: 'achievement',
+                  icon: 'achievement',
                   title: '<span>20</span> лет <br> на рынке, с 2005 года',
                 },
               ])
           </div>
         </section>
 
-        <section class="section store">
+        <section class="section store" id="store">
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Наши радиостанции
               </h2>
             </div>
@@ -125,13 +125,13 @@
           </div>
         </section>
 
-        <section class="section scope">
+        <section class="section scope" id="scope">
           <span class="section-bg desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
           <span class="section-bg mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
 
           <div class="container">
             <div class="section-header">
-              <h2 class="h2 section-title">
+              <h2 class="section-title">
                 Области применения
               </h2>
             </div>
@@ -168,9 +168,197 @@
           </div>
         </section>
 
-        <section class="section"></section>
+        <section class="section about" id="about">
+          <div class="container">
+            <div class="about-content">
+              <div class="section-header">
+                <h2 class="section-title">
+                  О производителе
+                </h2>
+              </div>
+              <div class="about-text">
+                <p>
+                  Компания SimRadio занимается разработкой и производством pадиооборудования профессионального и любительского класса. При изготовлении наших раций используются прочные материалы, устойчивые к механическим повреждениям и с защитой от влаги.
+                </p>
+                <p>
+                  Базовое оборудование и системы радиосвязи разрабатываются в лаборатории в Московской области, производство и сборка продукции перенесены в Китай с целью снижения
+                </p>
+              </div>
+            </div>
+            <div class="about-picture">
+              <picture>
+                <source srcset="img/about/image-1@2x.webp" type="image/webp">
+                <img loading="lazy" src="img/about/image-1@2x.jpg" class="image" width="633" height="400" alt="Картинка">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="section certificates" id="certificates">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Сертификаты
+              </h2>
+            </div>
+
+            <div class="certificates-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  @loop('partials/slides/certificates.html', [
+                    {
+                      image: {
+                        src: 'image-1@2x',
+                        width: '316',
+                        height: '407',
+                      },
+                      title: 'ISO 9001:2015',
+                    },
+                    {
+                      image: {
+                        src: 'image-2@2x',
+                        width: '327',
+                        height: '235',
+                      },
+                      title: 'EAC',
+                    },
+                    {
+                      image: {
+                        src: 'image-3@2x',
+                        width: '281',
+                        height: '399',
+                      },
+                      title: 'Минцифры РФ',
+                    },
+                  ])
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section partners">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                партнеры
+              </h2>
+            </div>
+
+            <div class="partners-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  @loop('partials/slides/partners.html', [
+                    {
+                      image: 'image-1@2x'
+                    },
+                    {
+                      image: 'image-2@2x'
+                    },
+                    {
+                      image: 'image-3@2x'
+                    },
+                    {
+                      image: 'image-4@2x'
+                    },
+                  ])
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contacts" id="contacts">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Где купить
+              </h2>
+            </div>
+
+            <div class="tabs contacts-tabs">
+              <div class="contacts-content">
+                <nav class="tabs-nav">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button is-active">
+                    Москва
+                  </button>
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                    Санкт-Петербург
+                  </button>
+                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                    Екатеринбург
+                  </button>
+                </nav>
+                <div class="tabs-content">
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      @loop('partials/items/contacts.html', [
+                        {
+                          address: 'ул. Радиотехническая, д. 15, офис 203',
+                          phone: true,
+                          email: true,
+                        },
+                        {
+                          address: 'Ленинградское шоссе, д. 80, строение 1',
+                          phone: true,
+                          email: false,
+                        },
+                      ])
+                    </ul>
+                  </div>
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      @loop('partials/items/contacts.html', [
+                        {
+                          address: 'ул. Радиотехническая, д. 15, офис 203',
+                          phone: true,
+                          email: false,
+                        },
+                        {
+                          address: 'Ленинградское шоссе, д. 80, строение 1',
+                          phone: true,
+                          email: true,
+                        },
+                      ])
+                    </ul>
+                  </div>
+                  <div class="tabs-pane">
+                    <ul class="list-reset contacts-list">
+                      @loop('partials/items/contacts.html', [
+                        {
+                          address: 'ул. Радиотехническая, д. 15, офис 203',
+                          phone: true,
+                          email: false,
+                        },
+                        {
+                          address: 'Ленинградское шоссе, д. 80, строение 1',
+                          phone: true,
+                          email: false,
+                        },
+                      ])
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-map">
+                <div class="tabs-content">
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                  <div class="tabs-pane">
+                    <div class="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
+      @include('partials/modals.html')
       @include('partials/offcanvases.html')
     </main>
 

@@ -2,12 +2,20 @@
 
 .header {
   width: 100%;
-  background-color: var(--light-rgba-60);
+  background-color: var(--light);
   padding-block: 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1030;
+
+  @include mixins.breakpoint-up(lg) {
+    background-color: var(--light-rgba-60);
+
+    transition-property: background-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+  }
 
   > .container {
     display: flex;
@@ -95,6 +103,13 @@
 
     @include mixins.breakpoint-up(lg) {
       display: none;
+    }
+  }
+
+  &--sticky {
+
+    @include mixins.breakpoint-up(lg) {
+      background-color: var(--light);
     }
   }
 }
