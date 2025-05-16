@@ -801,6 +801,7 @@ a.btn {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
 @media (min-width: 991.98px) {
