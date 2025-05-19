@@ -8,7 +8,7 @@
     gap: 1.75rem;
 
     @include mixins.breakpoint-up(md) {
-      grid-template-columns: max-content 1fr;
+      grid-template-columns: minmax(0rem, 26.5rem) 1fr;
     }
 
     @include mixins.breakpoint-up(lg) {
@@ -17,6 +17,20 @@
   }
 
   &-content {
+
+    .tabs-nav {
+      margin-inline: calc(var(--container-offset) * -1);
+      margin-bottom: -.375rem;
+      padding-inline: var(--container-offset);
+      padding-bottom: .375rem;
+      overflow-y: hidden;
+      overflow-x: auto;
+
+      @include mixins.breakpoint-up(md) {
+          margin-inline: 0;
+          padding-inline: 0;
+      }
+    }
 
     .tabs-content {
       margin-top: 1.25rem;

@@ -40,64 +40,72 @@
   }
 
   &-phone {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
     order: -1;
 
     @include mixins.breakpoint-up(lg) {
-      --_fs: .8125rem;
-      --_fw: 400;
-      --_color: #000;
-      --_bg: transparent;
-      --_rounded: 0rem;
-      --_padding: 0rem;
-
-      --_color-hover: var(--primary-500);
-      --_bg-hover: transparent;
-
-      --_color-active: var(--primary-500);
-      --_bg-active: transparent;
-
-      text-align: start;
       order: 2;
     }
 
-    > span {
+    &-link,
+    &-button {
+      --_color-hover: var(--primary-500);
 
-      &:first-child {
+      --_color-active: var(--primary-500);
+
+      @include mixins.breakpoint-up(lg) {
+        justify-content: start;
+        text-align: start;
+      }
+    }
+
+    &-link {
+      --_fs: 1.3125rem;
+      --_fw: 600;
+      --_color: #000;
+
+      display: none;
+
+      @include mixins.breakpoint-up(lg) {
+        display: inline-flex;
+      }
+    }
+
+    &-button {
+      --_fs: .8125rem;
+      --_color: var(--primary);
+
+      text-decoration: underline;
+      text-underline-offset: .25em;
+
+      @include mixins.breakpoint-up(lg) {
+        --_bg: transparent;
+        --_rounded: 0rem;
+        --_padding: 0rem;
+
+        --_bg-hover: transparent;
+
+        --_bg-active: transparent;
+      }
+
+      .text {
         display: none;
 
         @include mixins.breakpoint-up(lg) {
-          display: flex;
-          flex-direction: column;
-          gap: .5rem;
+          display: inline;
         }
       }
 
-      > span {
+      .icon {
 
-        &:first-child {
-
-          @include mixins.breakpoint-up(lg) {
-            font-size: 1.3125rem;
-            font-weight: 600;
-          }
-        }
-
-        &:last-child {
-
-          @include mixins.breakpoint-up(lg) {
-            color: var(--primary);
-            text-decoration: underline;
-          }
+        @include mixins.breakpoint-up(lg) {
+          display: none;
         }
       }
     }
 
-    .icon {
-
-      @include mixins.breakpoint-up(lg) {
-        display: none;
-      }
-    }
   }
 
   &-menu {

@@ -60,20 +60,24 @@
       </button>
     </nav>
 
-    <button type="button" class="btn btn-icon header-phone"
-      data-bs-toggle="modal"
-      data-bs-target="#form-callback">
-      <span>
-        <span>8 800 301-06-07</span>
-        <span>Заказать обратный звонок</span>
-      </span>
+    <div class="header-phone">
+      <a href="tel:+88003010607" class="btn header-phone-link">
+        8 800 301-06-07
+      </a>
+      <button type="button" class="btn btn-icon header-phone-button"
+        data-bs-toggle="modal"
+        data-bs-target="#form-callback">
+        <span class="text">
+          Заказать обратный звонок
+        </span>
 
-      <span class="icon">
-        <svg>
-          <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
-        </svg>
-      </span>
-    </button>
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
 
     <button type="button" class="btn btn-icon header-menu"
       data-bs-toggle="offcanvas"
