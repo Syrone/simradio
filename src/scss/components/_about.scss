@@ -2,7 +2,7 @@
 
 .about {
 
-  > .container {
+  &__container {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
@@ -18,7 +18,7 @@
     }
   }
 
-  &-content {
+  &__content {
 
     @include mixins.breakpoint-up(md) {
       padding-right: 2rem;
@@ -28,12 +28,12 @@
       padding-right: 3.25rem;
     }
 
-    .section-header {
+    .section__header {
       margin-bottom: .75rem;
     }
   }
 
-  &-text {
+  &__text {
     font-size: var(--fs-md);
 
     @include mixins.breakpoint-up(lg) {
@@ -41,9 +41,9 @@
     }
   }
 
-  &-picture {
+  &__picture {
 
-    .image {
+    &-image {
       width: 100%;
       display: block;
       border-radius: 1.5rem;

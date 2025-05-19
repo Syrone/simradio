@@ -1,0 +1,33 @@
+@use "mixins" as mixins;
+
+.form {
+
+  &__body {
+    display: grid;
+    gap: 1.5rem;
+
+    @include mixins.breakpoint-up(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.5rem;
+    }
+  }
+
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @include mixins.breakpoint-up(sm) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__hint {
+    font-size: var(--fs-sm);
+    color: var(--text-color-rgba-70);
+  }
+}

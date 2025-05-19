@@ -1,15 +1,15 @@
 .tabs {
 
-  &-nav {
+  &__nav {
     display: flex;
     gap: 0.25rem;
   }
 }
 
-.tabs-pane {
+.tabs__pane {
   display: none;
 
-  &.is-active {
+  &--active {
     display: block;
   }
 }

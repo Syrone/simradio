@@ -2,7 +2,7 @@
 
 .hero {
 
-  &-swiper {
+  &__swiper {
     position: relative;
 
     &-slide {
@@ -17,46 +17,43 @@
         margin-inline: 1.25rem;
         border-radius: 0 0 3rem 3rem;
       }
+    }
 
-      > .container {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        position: relative;
+    &-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
 
-        &::after {
-          content: '';
-          display: block;
-          background-image: radial-gradient(var(--light-rgba-60) 40%, rgba(255, 255, 255, 0) 70%);
-          pointer-events: none;
-          user-select: none;
-          position: absolute;
-          top: -15rem;
-          left: -15rem;
-          right: calc(50% - 15rem);
-          bottom: -15rem;
-          z-index: -1;
-        }
+      &::after {
+        content: '';
+        display: block;
+        background-image: radial-gradient(var(--light-rgba-60) 40%, rgba(255, 255, 255, 0) 70%);
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        top: -15rem;
+        left: -15rem;
+        right: calc(50% - 15rem);
+        bottom: -15rem;
+        z-index: -1;
       }
     }
 
     &-bg {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      user-select: none;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
       opacity: .35;
 
-      &,
-      &-decor {
-        display: block;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        pointer-events: none;
-        user-select: none;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-      }
-
-      &-decor {
+      &--decor {
+        opacity: 1;
 
         @include mixins.breakpoint-down(lg) {
           display: none;
@@ -85,9 +82,22 @@
 
     &-picture {
 
-      &-decor {
+      &_image {
+        width: 100%;
+        display: block;
+        padding-top: 4rem;
 
-        .image {
+        @include mixins.breakpoint-up(lg) {
+          max-width: 900px;
+          padding-top: calc((var(--header-height, 5.375rem) * .5));
+        }
+      }
+
+
+
+      &--decor {
+
+        .hero__swiper-picture_image {
           width: 100%;
           display: block;
           object-fit: contain;
@@ -101,17 +111,6 @@
             top: auto;
             bottom: -15rem;
           }
-        }
-      }
-
-      .image {
-        width: 100%;
-        display: block;
-        padding-top: 4rem;
-
-        @include mixins.breakpoint-up(lg) {
-          max-width: 900px;
-          padding-top: calc((var(--header-height, 5.375rem) * .5));
         }
       }
     }

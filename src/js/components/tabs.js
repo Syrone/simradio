@@ -1,7 +1,7 @@
 function initTabs() {
-  document.querySelectorAll('.tabs').forEach(tabsBlock => {
-    const navs = tabsBlock.querySelectorAll('.tabs-nav')
-    const contents = tabsBlock.querySelectorAll('.tabs-content')
+  document.querySelectorAll('[data-tabs]').forEach(tabsBlock => {
+    const navs = tabsBlock.querySelectorAll('[data-tabs-nav]')
+    const contents = tabsBlock.querySelectorAll('[data-tabs-content]')
     if (!navs.length || !contents.length) return
 
     // Собираем все кнопки табов
@@ -20,7 +20,7 @@ function initTabs() {
         // Активируем только нужный контент во всех content
         contents.forEach(content => {
           Array.from(content.children).forEach((pane, i) => {
-            pane.classList.toggle('is-active', i === idx)
+            pane.classList.toggle('tabs__pane--active', i === idx)
           })
         })
       })

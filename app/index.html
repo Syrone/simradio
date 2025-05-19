@@ -22,53 +22,48 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 
-<body class="page-body">
+<body class="page__body">
   <h1 class="visually-hidden">
     Лучшие рации для использования охранными предприятиями
 </h1>
 
-  <div class="site-container">
+  <div class="site__container">
     <header class="header">
-  <div class="container">
+  <div class="container header__container">
     <a href="#" class="btn brand">
-  <picture class="brand-picture">
+  <picture class="brand__picture">
     <source srcset="./img/logo@2x.webp" type="image/webp">
-    <img loading="lazy" src="./img/logo@2x.png" class="image" width="208" height="58" alt="SimRadio">
+    <img loading="lazy" src="./img/logo@2x.png" class="brand__picture-image" width="208" height="58" alt="SimRadio">
   </picture>
 </a>
 
-    <nav class="header-nav"
+    <nav class="header__nav"
       data-transfer-origin="header-nav"
       data-transfer-breakpoint="991.98">
-      <button type="button" class="btn header-nav-link" data-scrollto="hero">
+      <button type="button" class="btn header__nav-link" data-scrollto="hero">
         Главная
       </button>
-      <button type="button" class="btn header-nav-link" data-scrollto="store">
+      <button type="button" class="btn header__nav-link" data-scrollto="store">
         Продукция
       </button>
-      <button type="button" class="btn header-nav-link" data-scrollto="scope">
+      <button type="button" class="btn header__nav-link" data-scrollto="scope">
         Применение
       </button>
-      <button type="button" class="btn header-nav-link" data-scrollto="about">
+      <button type="button" class="btn header__nav-link" data-scrollto="about">
         О нac
       </button>
-      <button type="button" class="btn header-nav-link" data-scrollto="certificates">
+      <button type="button" class="btn header__nav-link" data-scrollto="certificates">
         Сертификаты
       </button>
-      <button type="button" class="btn header-nav-link" data-scrollto="contacts">
+      <button type="button" class="btn header__nav-link" data-scrollto="contacts">
         Где купить
       </button>
     </nav>
 
-    <div class="header-phone">
-      <a href="tel:+88003010607" class="btn header-phone-link">
-        8 800 301-06-07
-      </a>
-      <button type="button" class="btn btn-icon header-phone-button"
-        data-bs-toggle="modal"
-        data-bs-target="#form-callback">
+    <div class="header__phone">
+      <a href="tel:+88003010607" class="btn btn-icon header__phone-link">
         <span class="text">
-          Заказать обратный звонок
+          8 800 301-06-07
         </span>
 
         <span class="icon">
@@ -76,10 +71,17 @@
             <use xlink:href="img/icons/phone-outline.svg#svg-phone-outline"></use>
           </svg>
         </span>
+      </a>
+      <button type="button" class="btn header__phone-button"
+        data-transfer-origin="header-phone-button"
+        data-transfer-breakpoint="991.98"
+        data-bs-toggle="modal"
+        data-bs-target="#form-callback">
+        Заказать обратный звонок
       </button>
     </div>
 
-    <button type="button" class="btn btn-icon header-menu"
+    <button type="button" class="btn btn-icon header__menu"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvas-menu"
       aria-controls="Навигационное меню">
@@ -93,119 +95,119 @@
 </header>
 
     <main class="main">
-      <div class="main-sections">
+      <div class="main__sections">
         <section class="section hero" id="hero">
-          <div class="hero-swiper">
+          <div class="hero__swiper" data-swiper="hero">
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-  <div class="hero-swiper-slide">
-    <span class="hero-swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
-    <span class="hero-swiper-bg-decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
+  <div class="hero__swiper-slide">
+    <span class="hero__swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
+    <span class="hero__swiper-bg hero__swiper-bg--decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
 
-    <div class="container">
-      <div class="hero-swiper-content">
-        <h2 class="h1 hero-swiper-title">
+    <div class="container hero__swiper-bg-container">
+      <div class="hero__swiper-content">
+        <h2 class="h1 hero__swiper-title">
           Лучшие рации для использования охранными предприятиями
         </h2>
-        <p class="hero-swiper-subtitle">
+        <p class="hero__swiper-subtitle">
           Надежная связь в любых условиях для обеспечения безопасности
         </p>
       </div>
     </div>
 
-    <div class="hero-swiper-pictures">
-      <picture class="hero-swiper-picture">
+    <div class="hero__swiper-pictures">
+      <picture class="hero__swiper-picture">
         <source srcset="img/hero/image-1@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/image-1@2x.png" class="image" width="900" height="600" alt="Картинка">
+        <img loading="lazy" src="img/hero/image-1@2x.png" class="hero__swiper-picture_image" width="900" height="600" alt="Картинка">
       </picture>
-      <picture class="hero-swiper-picture-decor">
+      <picture class="hero__swiper-picture hero__swiper-picture--decor">
         <source srcset="img/hero/decor@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/decor@2x.png" class="image" width="910" height="910" alt="Декоративная картинка">
+        <img loading="lazy" src="img/hero/decor@2x.png" class="hero__swiper-picture_image" width="910" height="910" alt="Декоративная картинка">
       </picture>
     </div>
   </div>
 </div>
 <div class="swiper-slide">
-  <div class="hero-swiper-slide">
-    <span class="hero-swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
-    <span class="hero-swiper-bg-decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
+  <div class="hero__swiper-slide">
+    <span class="hero__swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
+    <span class="hero__swiper-bg hero__swiper-bg--decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
 
-    <div class="container">
-      <div class="hero-swiper-content">
-        <h2 class="h1 hero-swiper-title">
+    <div class="container hero__swiper-bg-container">
+      <div class="hero__swiper-content">
+        <h2 class="h1 hero__swiper-title">
           Лучшие рации для использования охранными предприятиями
         </h2>
-        <p class="hero-swiper-subtitle">
+        <p class="hero__swiper-subtitle">
           Надежная связь в любых условиях для обеспечения безопасности
         </p>
       </div>
     </div>
 
-    <div class="hero-swiper-pictures">
-      <picture class="hero-swiper-picture">
+    <div class="hero__swiper-pictures">
+      <picture class="hero__swiper-picture">
         <source srcset="img/hero/image-2@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/image-2@2x.png" class="image" width="900" height="600" alt="Картинка">
+        <img loading="lazy" src="img/hero/image-2@2x.png" class="hero__swiper-picture_image" width="900" height="600" alt="Картинка">
       </picture>
-      <picture class="hero-swiper-picture-decor">
+      <picture class="hero__swiper-picture hero__swiper-picture--decor">
         <source srcset="img/hero/decor@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/decor@2x.png" class="image" width="910" height="910" alt="Декоративная картинка">
+        <img loading="lazy" src="img/hero/decor@2x.png" class="hero__swiper-picture_image" width="910" height="910" alt="Декоративная картинка">
       </picture>
     </div>
   </div>
 </div>
 <div class="swiper-slide">
-  <div class="hero-swiper-slide">
-    <span class="hero-swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
-    <span class="hero-swiper-bg-decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
+  <div class="hero__swiper-slide">
+    <span class="hero__swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
+    <span class="hero__swiper-bg hero__swiper-bg--decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
 
-    <div class="container">
-      <div class="hero-swiper-content">
-        <h2 class="h1 hero-swiper-title">
+    <div class="container hero__swiper-bg-container">
+      <div class="hero__swiper-content">
+        <h2 class="h1 hero__swiper-title">
           Лучшие рации для использования охранными предприятиями
         </h2>
-        <p class="hero-swiper-subtitle">
+        <p class="hero__swiper-subtitle">
           Надежная связь в любых условиях для обеспечения безопасности
         </p>
       </div>
     </div>
 
-    <div class="hero-swiper-pictures">
-      <picture class="hero-swiper-picture">
+    <div class="hero__swiper-pictures">
+      <picture class="hero__swiper-picture">
         <source srcset="img/hero/image-1@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/image-1@2x.png" class="image" width="900" height="600" alt="Картинка">
+        <img loading="lazy" src="img/hero/image-1@2x.png" class="hero__swiper-picture_image" width="900" height="600" alt="Картинка">
       </picture>
-      <picture class="hero-swiper-picture-decor">
+      <picture class="hero__swiper-picture hero__swiper-picture--decor">
         <source srcset="img/hero/decor@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/decor@2x.png" class="image" width="910" height="910" alt="Декоративная картинка">
+        <img loading="lazy" src="img/hero/decor@2x.png" class="hero__swiper-picture_image" width="910" height="910" alt="Декоративная картинка">
       </picture>
     </div>
   </div>
 </div>
 <div class="swiper-slide">
-  <div class="hero-swiper-slide">
-    <span class="hero-swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
-    <span class="hero-swiper-bg-decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
+  <div class="hero__swiper-slide">
+    <span class="hero__swiper-bg" style="background-image: url(img/hero/bg@2x.webp);"></span>
+    <span class="hero__swiper-bg hero__swiper-bg--decor" style="background-image: url(img/hero/decor-2@2x.webp);"></span>
 
-    <div class="container">
-      <div class="hero-swiper-content">
-        <h2 class="h1 hero-swiper-title">
+    <div class="container hero__swiper-bg-container">
+      <div class="hero__swiper-content">
+        <h2 class="h1 hero__swiper-title">
           Лучшие рации для использования охранными предприятиями
         </h2>
-        <p class="hero-swiper-subtitle">
+        <p class="hero__swiper-subtitle">
           Надежная связь в любых условиях для обеспечения безопасности
         </p>
       </div>
     </div>
 
-    <div class="hero-swiper-pictures">
-      <picture class="hero-swiper-picture">
+    <div class="hero__swiper-pictures">
+      <picture class="hero__swiper-picture">
         <source srcset="img/hero/image-2@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/image-2@2x.png" class="image" width="900" height="600" alt="Картинка">
+        <img loading="lazy" src="img/hero/image-2@2x.png" class="hero__swiper-picture_image" width="900" height="600" alt="Картинка">
       </picture>
-      <picture class="hero-swiper-picture-decor">
+      <picture class="hero__swiper-picture hero__swiper-picture--decor">
         <source srcset="img/hero/decor@2x.webp" type="image/webp">
-        <img loading="lazy" src="img/hero/decor@2x.png" class="image" width="910" height="910" alt="Декоративная картинка">
+        <img loading="lazy" src="img/hero/decor@2x.png" class="hero__swiper-picture_image" width="910" height="910" alt="Декоративная картинка">
       </picture>
     </div>
   </div>
@@ -232,60 +234,60 @@
         </section>
 
         <section class="section features">
-          <span class="section-bg" style="background-image: url(img/features/decor@2x.webp);"></span>
+          <span class="section__bg" style="background-image: url(img/features/decor@2x.webp);"></span>
 
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Наши преимущества
               </h2>
             </div>
 
-            <div class="features-list">
-              <article class="features-item">
-  <span class="icon features-item-icon">
+            <div class="features__list">
+              <article class="features__item">
+  <span class="icon features__item-icon">
     <svg>
       <use xlink:href="img/icons/radio.svg#svg-radio"></use>
     </svg>
   </span>
-  <div class="features-item-content">
-    <h3 class="features-item-title">
+  <div class="features__item-content">
+    <h3 class="features__item-title">
       <span>5</span> лет <br> служба радиостанций SimRadio
     </h3>
   </div>
 </article>
-<article class="features-item">
-  <span class="icon features-item-icon">
+<article class="features__item">
+  <span class="icon features__item-icon">
     <svg>
       <use xlink:href="img/icons/warranty.svg#svg-warranty"></use>
     </svg>
   </span>
-  <div class="features-item-content">
-    <h3 class="features-item-title">
+  <div class="features__item-content">
+    <h3 class="features__item-title">
       <span>2</span> года <br> гарантии на радиостанции
     </h3>
   </div>
 </article>
-<article class="features-item">
-  <span class="icon features-item-icon">
+<article class="features__item">
+  <span class="icon features__item-icon">
     <svg>
       <use xlink:href="img/icons/delivery.svg#svg-delivery"></use>
     </svg>
   </span>
-  <div class="features-item-content">
-    <h3 class="features-item-title">
+  <div class="features__item-content">
+    <h3 class="features__item-title">
       <span>24</span> часа <br> срок доставки после оплаты
     </h3>
   </div>
 </article>
-<article class="features-item">
-  <span class="icon features-item-icon">
+<article class="features__item">
+  <span class="icon features__item-icon">
     <svg>
       <use xlink:href="img/icons/achievement.svg#svg-achievement"></use>
     </svg>
   </span>
-  <div class="features-item-content">
-    <h3 class="features-item-title">
+  <div class="features__item-content">
+    <h3 class="features__item-title">
       <span>20</span> лет <br> на рынке, с 2005 года
     </h3>
   </div>
@@ -296,32 +298,32 @@
 
         <section class="section store" id="store">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Наши радиостанции
               </h2>
             </div>
 
-            <div class="store-list">
-              <article class="store-item">
+            <div class="store__list">
+              <article class="store__item" data-swiper="store">
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-1@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-1@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-1@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-1@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-1@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-1@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-1@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-1@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-1@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
     </div>
@@ -342,81 +344,81 @@
     </button>
   </div>
 
-  <div class="store-item-content">
-    <h3 class="h5 store-item-title">
+  <div class="store__item-content">
+    <h3 class="h5 store__item-title">
       SimRadio Pro X5
     </h3>
-    <div class="store-item-description">
+    <div class="store__item-description">
       <p>Надежная радиостанция для профессионального и активного использования. Идеально подходит для охраны, стройки, логистики и туризма. Обеспечивает стабильную связь даже в сложных условиях благодаря мощному передатчику и продуманной электронике.</p><p>Прочный корпус, удобное управление и поддержка ключевых функций — экстренный вызов, шумоподавление, FM-радио, программируемые каналы. Работает долго без подзарядки и совместима с популярными аксессуарами. Pro X5 — выбор для тех, кому нужна уверенная связь и долговечность.</p>
     </div>
 
-    <ul class="list-reset store-item-features">
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+    <ul class="list-reset store__item-features">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Дальность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           до 10 км
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Мощность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           5 Вт
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Степень защиты
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           IP67
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           ёмкость аккумулятора
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           2200 мАч
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Стандарт связи
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           DMR Tier II
         </p>
       </li>
     </ul>
 
-    <button type="button" class="btn btn-lg btn-primary-gradient store-item-button">
+    <button type="button" class="btn btn-lg btn-primary-gradient store__item-button">
       Купить
     </button>
   </div>
 </article>
-<article class="store-item">
+<article class="store__item" data-swiper="store">
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
     </div>
@@ -437,81 +439,81 @@
     </button>
   </div>
 
-  <div class="store-item-content">
-    <h3 class="h5 store-item-title">
+  <div class="store__item-content">
+    <h3 class="h5 store__item-title">
       SimRadio Compact S3
     </h3>
-    <div class="store-item-description">
+    <div class="store__item-description">
       <p>Лёгкая и надёжная радиостанция, идеально подходящая для повседневного использования в городских условиях, на складе, в сфере обслуживания или во время активного отдыха.</p><p>Благодаря компактным размерам и малому весу, она удобно помещается в карман или крепится на ремень, не мешая при движении. Несмотря на скромные габариты, Compact S3 обеспечивает стабильную и качественную связь на значительных расстояниях, что делает её отличным выбором для тех, кому важна мобильность и надёжность.</p>
     </div>
 
-    <ul class="list-reset store-item-features">
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+    <ul class="list-reset store__item-features">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Дальность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           до 10 км
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Мощность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           5 Вт
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Степень защиты
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           IP67
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           ёмкость аккумулятора
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           2200 мАч
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Стандарт связи
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           DMR Tier II
         </p>
       </li>
     </ul>
 
-    <button type="button" class="btn btn-lg btn-primary-gradient store-item-button">
+    <button type="button" class="btn btn-lg btn-primary-gradient store__item-button">
       Купить
     </button>
   </div>
 </article>
-<article class="store-item">
+<article class="store__item" data-swiper="store">
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
       <div class="swiper-slide">
-        <picture class="store-item-picture">
+        <picture class="store__item-picture">
           <source srcset="img/store/image-2@2x.webp" type="image/webp">
-          <img loading="lazy" src="img/store/image-2@2x.png" class="image" width="395" height="395" alt="Картинка">
+          <img loading="lazy" src="img/store/image-2@2x.png" class="store__item-picture_image" width="395" height="395" alt="Картинка">
         </picture>
       </div>
     </div>
@@ -532,58 +534,58 @@
     </button>
   </div>
 
-  <div class="store-item-content">
-    <h3 class="h5 store-item-title">
+  <div class="store__item-content">
+    <h3 class="h5 store__item-title">
       SimRadio Tactical T7
     </h3>
-    <div class="store-item-description">
+    <div class="store__item-description">
       <p>Тактическая радиостанция, предназначенная для профессионального использования в условиях, требующих повышенной надёжности и безопасности связи. Её прочный корпус обеспечивает устойчивость к механическим повреждениям и воздействию окружающей среды, что делает её подходящей для эксплуатации в сложных условиях.</p><p>Устройство оснащено функцией шифрования, обеспечивающей защиту передаваемой информации от несанкционированного доступа. Дополнительные возможности, такие как программируемые каналы и совместимость с различными аксессуарами, позволяют адаптировать радиостанцию под специфические задачи пользователя.</p>
     </div>
 
-    <ul class="list-reset store-item-features">
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+    <ul class="list-reset store__item-features">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Дальность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           до 10 км
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Мощность
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           5 Вт
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Степень защиты
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           IP67
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           ёмкость аккумулятора
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           2200 мАч
         </p>
       </li>
-      <li class="store-item-feature">
-        <h4 class="store-item-feature-title">
+      <li class="store__item-feature">
+        <h4 class="store__item-feature_title">
           Стандарт связи
         </h4>
-        <p class="store-item-feature-text">
+        <p class="store__item-feature_text">
           DMR Tier II
         </p>
       </li>
     </ul>
 
-    <button type="button" class="btn btn-lg btn-primary-gradient store-item-button">
+    <button type="button" class="btn btn-lg btn-primary-gradient store__item-button">
       Купить
     </button>
   </div>
@@ -591,8 +593,8 @@
 
             </div>
 
-            <div class="section-more">
-              <button type="button" class="btn">
+            <div class="section__more">
+              <button type="button" class="btn section__more-btn">
                 Показать еще
               </button>
             </div>
@@ -600,49 +602,49 @@
         </section>
 
         <section class="section scope" id="scope">
-          <span class="section-bg desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
-          <span class="section-bg mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
+          <span class="section__bg section__bg--desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
+          <span class="section__bg section__bg--mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
 
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Области применения
               </h2>
             </div>
 
-            <div class="scope-list">
-              <article class="scope-item">
-  <span class="scope-item-bg desktop" style="background-image: url(img/scope/image-1@2x.webp);"></span>
-  <span class="scope-item-bg mobile" style="background-image: url(img/scope/image-1@2x.webp);"></span>
-  <h3 class="scope-item-title">
+            <div class="scope__list">
+              <article class="scope__item">
+  <span class="scope__item-bg scope__item-bg--desktop" style="background-image: url(img/scope/image-1@2x.webp);"></span>
+  <span class="scope__item-bg scope__item-bg--mobile" style="background-image: url(img/scope/image-1@2x.webp);"></span>
+  <h3 class="scope__item-title">
     Строительство
   </h3>
 </article>
-<article class="scope-item">
-  <span class="scope-item-bg desktop" style="background-image: url(img/scope/image-2@2x.webp);"></span>
-  <span class="scope-item-bg mobile" style="background-image: url(img/scope/image-2@2x.webp);"></span>
-  <h3 class="scope-item-title">
+<article class="scope__item">
+  <span class="scope__item-bg scope__item-bg--desktop" style="background-image: url(img/scope/image-2@2x.webp);"></span>
+  <span class="scope__item-bg scope__item-bg--mobile" style="background-image: url(img/scope/image-2@2x.webp);"></span>
+  <h3 class="scope__item-title">
     Служба охраны
   </h3>
 </article>
-<article class="scope-item">
-  <span class="scope-item-bg desktop" style="background-image: url(img/scope/image-3@2x.webp);"></span>
-  <span class="scope-item-bg mobile" style="background-image: url(img/scope/image-3@2x.webp);"></span>
-  <h3 class="scope-item-title">
+<article class="scope__item">
+  <span class="scope__item-bg scope__item-bg--desktop" style="background-image: url(img/scope/image-3@2x.webp);"></span>
+  <span class="scope__item-bg scope__item-bg--mobile" style="background-image: url(img/scope/image-3@2x.webp);"></span>
+  <h3 class="scope__item-title">
     Медицина
   </h3>
 </article>
-<article class="scope-item">
-  <span class="scope-item-bg desktop" style="background-image: url(img/scope/image-4@2x.webp);"></span>
-  <span class="scope-item-bg mobile" style="background-image: url(img/scope/image-4-mobile@2x.webp);"></span>
-  <h3 class="scope-item-title">
+<article class="scope__item">
+  <span class="scope__item-bg scope__item-bg--desktop" style="background-image: url(img/scope/image-4@2x.webp);"></span>
+  <span class="scope__item-bg scope__item-bg--mobile" style="background-image: url(img/scope/image-4-mobile@2x.webp);"></span>
+  <h3 class="scope__item-title">
     Государственные <br> структуры
   </h3>
 </article>
-<article class="scope-item">
-  <span class="scope-item-bg desktop" style="background-image: url(img/scope/image-5@2x.webp);"></span>
-  <span class="scope-item-bg mobile" style="background-image: url(img/scope/image-5@2x.webp);"></span>
-  <h3 class="scope-item-title">
+<article class="scope__item">
+  <span class="scope__item-bg scope__item-bg--desktop" style="background-image: url(img/scope/image-5@2x.webp);"></span>
+  <span class="scope__item-bg scope__item-bg--mobile" style="background-image: url(img/scope/image-5@2x.webp);"></span>
+  <h3 class="scope__item-title">
     Сельское хозяйство
   </h3>
 </article>
@@ -652,14 +654,14 @@
         </section>
 
         <section class="section about" id="about">
-          <div class="container">
-            <div class="about-content">
-              <div class="section-header">
-                <h2 class="section-title">
+          <div class="container about__container">
+            <div class="about__content">
+              <div class="section__header">
+                <h2 class="section__title">
                   О производителе
                 </h2>
               </div>
-              <div class="about-text">
+              <div class="about__text">
                 <p>
                   Компания SimRadio занимается разработкой и производством радиооборудования профессионального и любительского класса. При изготовлении наших раций используются прочные материалы, устойчивые к механическим повреждениям и с защитой от влаги.
                 </p>
@@ -668,10 +670,10 @@
                 </p>
               </div>
             </div>
-            <div class="about-picture">
+            <div class="about__picture">
               <picture>
                 <source srcset="img/about/image-1@2x.webp" type="image/webp">
-                <img loading="lazy" src="img/about/image-1@2x.jpg" class="image" width="633" height="400" alt="Картинка">
+                <img loading="lazy" src="img/about/image-1@2x.jpg" class="about__picture-image" width="633" height="400" alt="Картинка">
               </picture>
             </div>
           </div>
@@ -679,44 +681,44 @@
 
         <section class="section certificates" id="certificates">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Сертификаты
               </h2>
             </div>
 
-            <div class="certificates-swiper">
+            <div class="certificates__swiper" data-swiper="certificates">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-  <div class="certificates-slide">
-    <picture class="certificates-picture">
+  <div class="certificates__slide">
+    <picture class="certificates__picture">
       <source srcset="img/certificates/image-1@2x.webp" type="image/webp">
-      <img loading="lazy" src="img/certificates/image-1@2x.jpg" class="image" width="316" height="407" alt="Сертификат">
+      <img loading="lazy" src="img/certificates/image-1@2x.jpg" class="certificates__picture-image" width="316" height="407" alt="Сертификат">
     </picture>
-    <h3 class="certificates-title">
+    <h3 class="certificates__title">
       ISO 9001:2015
     </h3>
   </div>
 </div>
 <div class="swiper-slide">
-  <div class="certificates-slide">
-    <picture class="certificates-picture">
+  <div class="certificates__slide">
+    <picture class="certificates__picture">
       <source srcset="img/certificates/image-2@2x.webp" type="image/webp">
-      <img loading="lazy" src="img/certificates/image-2@2x.jpg" class="image" width="327" height="235" alt="Сертификат">
+      <img loading="lazy" src="img/certificates/image-2@2x.jpg" class="certificates__picture-image" width="327" height="235" alt="Сертификат">
     </picture>
-    <h3 class="certificates-title">
+    <h3 class="certificates__title">
       EAC
     </h3>
   </div>
 </div>
 <div class="swiper-slide">
-  <div class="certificates-slide">
-    <picture class="certificates-picture">
+  <div class="certificates__slide">
+    <picture class="certificates__picture">
       <source srcset="img/certificates/image-3@2x.webp" type="image/webp">
-      <img loading="lazy" src="img/certificates/image-3@2x.jpg" class="image" width="281" height="399" alt="Сертификат">
+      <img loading="lazy" src="img/certificates/image-3@2x.jpg" class="certificates__picture-image" width="281" height="399" alt="Сертификат">
     </picture>
-    <h3 class="certificates-title">
+    <h3 class="certificates__title">
       Минцифры РФ
     </h3>
   </div>
@@ -730,37 +732,37 @@
 
         <section class="section partners">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 партнеры
               </h2>
             </div>
 
-            <div class="partners-swiper">
+            <div class="partners__swiper" data-swiper="partners">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-  <picture class="partners-picture">
+  <picture class="partners__picture">
     <source srcset="img/partners/image-1@2x.webp" type="image/webp">
-    <img loading="lazy" src="img/partners/image-1@2x.png" class="image" width="225" height="104" alt="Партнер">
+    <img loading="lazy" src="img/partners/image-1@2x.png" class="partners__picture-image" width="225" height="104" alt="Партнер">
   </picture>
 </div>
 <div class="swiper-slide">
-  <picture class="partners-picture">
+  <picture class="partners__picture">
     <source srcset="img/partners/image-2@2x.webp" type="image/webp">
-    <img loading="lazy" src="img/partners/image-2@2x.png" class="image" width="225" height="104" alt="Партнер">
+    <img loading="lazy" src="img/partners/image-2@2x.png" class="partners__picture-image" width="225" height="104" alt="Партнер">
   </picture>
 </div>
 <div class="swiper-slide">
-  <picture class="partners-picture">
+  <picture class="partners__picture">
     <source srcset="img/partners/image-3@2x.webp" type="image/webp">
-    <img loading="lazy" src="img/partners/image-3@2x.png" class="image" width="225" height="104" alt="Партнер">
+    <img loading="lazy" src="img/partners/image-3@2x.png" class="partners__picture-image" width="225" height="104" alt="Партнер">
   </picture>
 </div>
 <div class="swiper-slide">
-  <picture class="partners-picture">
+  <picture class="partners__picture">
     <source srcset="img/partners/image-4@2x.webp" type="image/webp">
-    <img loading="lazy" src="img/partners/image-4@2x.png" class="image" width="225" height="104" alt="Партнер">
+    <img loading="lazy" src="img/partners/image-4@2x.png" class="partners__picture-image" width="225" height="104" alt="Партнер">
   </picture>
 </div>
 
@@ -772,56 +774,56 @@
 
         <section class="section contacts" id="contacts">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Где купить
               </h2>
             </div>
 
-            <div class="tabs contacts-tabs">
-              <div class="contacts-content">
-                <nav class="tabs-nav">
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button is-active">
+            <div class="tabs contacts__tabs" data-tabs="">
+              <div class="contacts__content">
+                <nav class="tabs__nav" data-tabs-nav="">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button is-active">
                     Москва
                   </button>
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button">
                     Санкт-Петербург
                   </button>
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button">
                     Екатеринбург
                   </button>
                 </nav>
-                <div class="tabs-content">
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
-                      <li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+                <div class="tabs__content" data-tabs-content="">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
+                      <li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       ул. Радиотехническая, д. 15, офис 203
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item-name">
             Email
           </span>
-          <a href="mailto:msk@simradio.ru" class="btn contacts-list-sublist-item-link">
+          <a href="mailto:msk@simradio.ru" class="btn contacts__list-sublist_item-link">
             msk@simradio.ru
           </a>
         </li>
@@ -829,25 +831,25 @@
     </ul>
   </div>
 </li>
-<li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+<li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       Ленинградское шоссе, д. 80, строение 1
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
@@ -858,27 +860,27 @@
 
                     </ul>
                   </div>
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
-                      <li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
+                      <li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       ул. Радиотехническая, д. 15, офис 203
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
@@ -886,34 +888,34 @@
     </ul>
   </div>
 </li>
-<li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+<li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       Ленинградское шоссе, д. 80, строение 1
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item-name">
             Email
           </span>
-          <a href="mailto:msk@simradio.ru" class="btn contacts-list-sublist-item-link">
+          <a href="mailto:msk@simradio.ru" class="btn contacts__list-sublist_item-link">
             msk@simradio.ru
           </a>
         </li>
@@ -924,27 +926,27 @@
 
                     </ul>
                   </div>
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
-                      <li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
+                      <li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       ул. Радиотехническая, д. 15, офис 203
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
@@ -952,25 +954,25 @@
     </ul>
   </div>
 </li>
-<li class="contacts-list-item">
-  <div class="contacts-list-item-icon">
+<li class="contacts__list-item">
+  <div class="contacts__list-item_icon">
     <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
       <svg>
         <use xlink:href="img/icons/location.svg#svg-location"></use>
       </svg>
     </span>
   </div>
-  <div class="contacts-list-item-body">
-    <div class="contacts-list-item-header">
+  <div class="contacts__list-item_body">
+    <div class="contacts__list-item_header">
       Ленинградское шоссе, д. 80, строение 1
     </div>
-    <ul class="list-reset contacts-list-sublist">
+    <ul class="list-reset contacts__list-sublist">
 
-        <li class="contacts-list-sublist-item">
-          <span class="contacts-list-sublist-item-name">
+        <li class="contacts__list-sublist_item">
+          <span class="contacts__list-sublist_item_name">
             Телефон
           </span>
-          <a href="tel:+74951234567" class="btn contacts-list-sublist-item-link">
+          <a href="tel:+74951234567" class="btn contacts__list-sublist_item-link">
             +7 495 123-45-67
           </a>
         </li>
@@ -983,15 +985,15 @@
                   </div>
                 </div>
               </div>
-              <div class="contacts-map">
-                <div class="tabs-content">
-                  <div class="tabs-pane">
+              <div class="contacts__map">
+                <div class="tabs__content" data-tabs-content="">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
-                  <div class="tabs-pane">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
-                  <div class="tabs-pane">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
                 </div>
@@ -1022,24 +1024,24 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="form-body">
-          <label class="field-control">
+        <div class="form__body">
+          <label class="field__control">
             <input type="text" class="field" name="name" required>
-            <span class="field-control-label">
+            <span class="field__control-label">
               Введите Ваше имя
             </span>
-            <span class="icon field-control-icon">
+            <span class="icon field__control-icon">
               <svg>
                 <use xlink:href="img/icons/user.svg#svg-user"></use>
               </svg>
             </span>
           </label>
-          <label class="field-control">
+          <label class="field__control">
             <input type="tel" class="field" name="phone" required>
-            <span class="field-control-label">
+            <span class="field__control-label">
               Введите Ваш телефон
             </span>
-            <span class="icon field-control-icon">
+            <span class="icon field__control-icon">
               <svg>
                 <use xlink:href="img/icons/phone-outline-2.svg#svg-phone-outline-2"></use>
               </svg>
@@ -1048,8 +1050,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <div class="form-footer">
-          <p class="form-hint">
+        <div class="form__footer">
+          <p class="form__hint">
             Нажимая кнопку «Перезвоните мне», <br>
             Вы соглашаетесь на <button type="button" class="btn btn-inherit" data-bs-toggle="modal" data-bs-target="#policy" data-bs-dismiss="modal">обработку персональных данных</button>
           </p>
@@ -1063,7 +1065,7 @@
   </div>
 </div>
 
-<div role="dialog" class="modal modal-policy fade" tabindex="-1"
+<div role="dialog" class="modal modal--policy fade" tabindex="-1"
   id="policy"
   aria-labelledby="policy-label"
   aria-hidden="true">
@@ -1113,12 +1115,12 @@
   </div>
 </div>
 
-      <div class="offcanvas offcanvas-menu offcanvas-end" tabindex="-1" id="offcanvas-menu">
+      <div class="offcanvas offcanvas--menu offcanvas--end" tabindex="-1" id="offcanvas-menu">
   <div class="offcanvas-header">
     <a href="#" class="btn brand">
-  <picture class="brand-picture">
+  <picture class="brand__picture">
     <source srcset="./img/logo@2x.webp" type="image/webp">
-    <img loading="lazy" src="./img/logo@2x.png" class="image" width="208" height="58" alt="SimRadio">
+    <img loading="lazy" src="./img/logo@2x.png" class="brand__picture-image" width="208" height="58" alt="SimRadio">
   </picture>
 </a>
 
@@ -1134,41 +1136,45 @@
 		data-transfer-target="header-nav">
 
   </div>
+  <div class="offcanvas-footer"
+    data-transfer-target="header-phone-button">
+
+  </div>
 </div>
 
     </main>
 
     <footer class="footer">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-header">
-        <div class="footer-header-contacts"
-          data-transfer-target="footer-header-contacts">
+    <div class="footer__top">
+      <div class="footer__header">
+        <div class="footer__header-contacts"
+          data-transfer-target="footer__header-contacts">
           <div class="footer-brand">
             <a href="#" class="btn brand">
-  <picture class="brand-picture">
+  <picture class="brand__picture">
     <source srcset="./img/logo@2x.webp" type="image/webp">
-    <img loading="lazy" src="./img/logo@2x.png" class="image" width="208" height="58" alt="SimRadio">
+    <img loading="lazy" src="./img/logo@2x.png" class="brand__picture-image" width="208" height="58" alt="SimRadio">
   </picture>
 </a>
 
           </div>
         </div>
 
-        <p class="footer-description">
+        <p class="footer__description">
           Разработка и производство профессионального радиооборудования с 2005 года.
         </p>
       </div>
 
-      <nav class="footer-nav">
-        <ul class="list-reset footer-list">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+      <nav class="footer__nav">
+        <ul class="list-reset footer__list">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Контакты
             </h3>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
                 <svg>
                   <use xlink:href="img/icons/location.svg#svg-location"></use>
@@ -1177,8 +1183,8 @@
               <span class="text">г. Москва, ул. Радиотехническая, д. 15, офис 203</span>
             </div>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74951234567" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="tel:+74951234567" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
                 <svg>
                   <use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -1187,8 +1193,8 @@
               <span class="text">+7 495 123-45-67</span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <a href="mailto:info@simradio.ru" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="mailto:info@simradio.ru" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/email.svg#svg-email)">
                 <svg>
                   <use xlink:href="img/icons/email.svg#svg-email"></use>
@@ -1199,14 +1205,14 @@
           </li>
         </ul>
 
-        <ul class="list-reset footer-list">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+        <ul class="list-reset footer__list">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Сервисный центр
             </h3>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
                 <svg>
                   <use xlink:href="img/icons/location.svg#svg-location"></use>
@@ -1215,8 +1221,8 @@
               <span class="text">г. Москва, ул. Сервисная, д. 10</span>
             </div>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
                 <svg>
                   <use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -1225,8 +1231,8 @@
               <span class="text">+7 495 765-43-21</span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/time.svg#svg-time)">
                 <svg>
                   <use xlink:href="img/icons/time.svg#svg-time"></use>
@@ -1237,16 +1243,16 @@
           </li>
         </ul>
 
-        <ul class="list-reset footer-list footer-contacts"
-          data-transfer-origin="footer-header-contacts"
+        <ul class="list-reset footer__list footer__contacts"
+          data-transfer-origin="footer__header-contacts"
           data-transfer-breakpoint="991.98">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Мы в соцсетях
             </h3>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-contacts-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__contacts-link">
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/insta.svg#svg-insta"></use>
@@ -1254,8 +1260,8 @@
               </span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-contacts-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__contacts-link">
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/youtube.svg#svg-youtube"></use>
@@ -1267,23 +1273,25 @@
       </nav>
     </div>
 
-    <div class="footer-bottom">
-      <p class="footer-copy">
+    <div class="footer__bottom">
+      <p class="footer__copy">
         © 2025 SimRadio. Вce права защищены.
       </p>
 
-      <nav class="footer-bottom-nav">
-        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+      <nav class="footer__bottom-nav">
+        <button type="button" class="btn btn-inherit footer__bottom-nav_link"
+          data-bs-toggle="modal"
+          data-bs-target="#policy">
           Политика конфиденциальности
-        </a>
-        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+        </button>
+        <a href="#" class="btn btn-inherit footer__bottom-nav_link">
           Юридическая информация
         </a>
 
-        <p class="footer-bottom-text">
-          <picture class="footer-bottom-text-logo">
+        <p class="footer__bottom-text">
+          <picture class="footer__bottom-text_logo">
             <source srcset="img/logo-2@2x.webp" type="image/webp">
-            <img loading="lazy" src="img/logo-2@2x.png" class="image" width="34" height="34" alt="Логотип ЭДД-Ю">
+            <img loading="lazy" src="img/logo-2@2x.png" class="footer__bottom-text_logo-image" width="34" height="34" alt="Логотип ЭДД-Ю">
           </picture>
 
           <span class="text">

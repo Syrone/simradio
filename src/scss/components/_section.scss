@@ -11,7 +11,7 @@
     margin-top: var(--_offset);
   }
 
-  &-bg {
+  &__bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,32 +20,32 @@
     z-index: -1;
   }
 
-	&-header {
+	&__header {
     margin-bottom: 2rem;
 	}
 
-	&-title,
-	&-subtitle {
+	&__title,
+	&__subtitle {
 		text-transform: uppercase;
 	}
 
-	&-title {
+	&__title {
 
 		+ .section-subtitle {
 			margin-top: 1rem;
 		}
 	}
 
-	&-subtitle {
+	&__subtitle {
 		font-size: 1.5rem;
 	}
 
-  &-more {
+  &__more {
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
 
-    .btn {
+    &-btn {
       --_fs: var(--fs-md);
       --_fw: 500;
       --_color: var(--text-color-200);

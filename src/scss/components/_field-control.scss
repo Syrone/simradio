@@ -1,11 +1,11 @@
 @use "mixins" as mixins;
 
-.field-control,
+.field__control,
 .fieldset {
 	position: relative;
 }
 
-.field-control {
+.field__control {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -80,7 +80,7 @@
 		background-color: var(--_bg-active);
 		border-color: var(--_border-color-active);
 
-    ~ .field-control {
+    ~ .field__control {
 
       &-label {
         color: var(--_color-active);

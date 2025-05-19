@@ -1,15 +1,16 @@
 @use "mixins" as mixins;
 
 .header {
-  width: 100%;
   background-color: var(--light);
   padding-block: 1.5rem;
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
   z-index: 1030;
 
   @include mixins.breakpoint-up(lg) {
+    padding-inline: 1.25rem;
     background-color: var(--light-rgba-60);
 
     transition-property: background-color;
@@ -17,14 +18,14 @@
     transition-timing-function: var(--transition-timing-function);
   }
 
-  > .container {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
   }
 
-  &-nav {
+  &__nav {
     display: flex;
     align-items: center;
     gap: 1.25rem;
@@ -39,7 +40,7 @@
     }
   }
 
-  &-phone {
+  &__phone {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -65,20 +66,6 @@
       --_fs: 1.3125rem;
       --_fw: 600;
       --_color: #000;
-
-      display: none;
-
-      @include mixins.breakpoint-up(lg) {
-        display: inline-flex;
-      }
-    }
-
-    &-button {
-      --_fs: .8125rem;
-      --_color: var(--primary);
-
-      text-decoration: underline;
-      text-underline-offset: .25em;
 
       @include mixins.breakpoint-up(lg) {
         --_bg: transparent;
@@ -106,9 +93,18 @@
       }
     }
 
+    &-button {
+      --_fs: .8125rem;
+      --_color: var(--primary);
+
+      text-decoration: underline;
+      text-underline-offset: .25em;
+      order: 1;
+    }
+
   }
 
-  &-menu {
+  &__menu {
 
     @include mixins.breakpoint-up(lg) {
       display: none;

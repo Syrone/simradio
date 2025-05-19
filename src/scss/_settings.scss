@@ -10,28 +10,27 @@
   scroll-behavior: smooth;
 }
 
-.page-body {
+.page__body {
+  margin: 0;
   min-width: 20rem;
   min-height: 100%;
-  margin: 0;
-
   font-family: var(--font-family, sans-serif);
-  font-size: var(--fs-base);
   font-weight: var(--fs-base);
+  font-size: var(--fs-base);
   line-height: var(--lh-base);
   color: var(--text-color);
   background-color: var(--body-bg);
 }
 
-.page-body,
-.site-container,
+.page__body,
+.site__container,
 .main {
   display: flex;
   flex-direction: column;
 }
 
-.site-container,
+.site__container,
 .main,
-.main-sections {
+.main__sections {
   flex: 1;
 }

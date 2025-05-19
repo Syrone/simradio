@@ -3,16 +3,16 @@
 
 @include('partials/head.html', {title: 'SimRadio'})
 
-<body class="page-body">
+<body class="page__body">
   @include('partials/h1.html', {title: 'Лучшие рации для использования охранными  предприятиями'})
 
-  <div class="site-container">
+  <div class="site__container">
     @include('partials/header.html')
 
     <main class="main">
-      <div class="main-sections">
+      <div class="main__sections">
         <section class="section hero" id="hero">
-          <div class="hero-swiper">
+          <div class="hero__swiper" data-swiper="hero">
             <div class="swiper">
               <div class="swiper-wrapper">
                 @loop('partials/slides/hero.html', [
@@ -58,16 +58,16 @@
         </section>
 
         <section class="section features">
-          <span class="section-bg" style="background-image: url(img/features/decor@2x.webp);"></span>
+          <span class="section__bg" style="background-image: url(img/features/decor@2x.webp);"></span>
 
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Наши преимущества
               </h2>
             </div>
 
-            <div class="features-list">
+            <div class="features__list">
               @loop('partials/items/features.html', [
                 {
                   icon: 'radio',
@@ -91,13 +91,13 @@
 
         <section class="section store" id="store">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Наши радиостанции
               </h2>
             </div>
 
-            <div class="store-list">
+            <div class="store__list">
               @loop('partials/items/store.html', [
                 {
                   image: 'image-1@2x',
@@ -117,8 +117,8 @@
               ])
             </div>
 
-            <div class="section-more">
-              <button type="button" class="btn">
+            <div class="section__more">
+              <button type="button" class="btn section__more-btn">
                 Показать еще
               </button>
             </div>
@@ -126,17 +126,17 @@
         </section>
 
         <section class="section scope" id="scope">
-          <span class="section-bg desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
-          <span class="section-bg mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
+          <span class="section__bg section__bg--desktop" style="background-image: url(img/scope/bg@2x.webp)"></span>
+          <span class="section__bg section__bg--mobile" style="background-image: url(img/scope/bg-mobile@2x.webp)"></span>
 
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Области применения
               </h2>
             </div>
 
-            <div class="scope-list">
+            <div class="scope__list">
               @loop('partials/items/scope.html', [
                 {
                   image: 'image-1@2x',
@@ -169,14 +169,14 @@
         </section>
 
         <section class="section about" id="about">
-          <div class="container">
-            <div class="about-content">
-              <div class="section-header">
-                <h2 class="section-title">
+          <div class="container about__container">
+            <div class="about__content">
+              <div class="section__header">
+                <h2 class="section__title">
                   О производителе
                 </h2>
               </div>
-              <div class="about-text">
+              <div class="about__text">
                 <p>
                   Компания SimRadio занимается разработкой и производством pадиооборудования профессионального и любительского класса. При изготовлении наших раций используются прочные материалы, устойчивые к механическим повреждениям и с защитой от влаги.
                 </p>
@@ -185,10 +185,10 @@
                 </p>
               </div>
             </div>
-            <div class="about-picture">
+            <div class="about__picture">
               <picture>
                 <source srcset="img/about/image-1@2x.webp" type="image/webp">
-                <img loading="lazy" src="img/about/image-1@2x.jpg" class="image" width="633" height="400" alt="Картинка">
+                <img loading="lazy" src="img/about/image-1@2x.jpg" class="about__picture-image" width="633" height="400" alt="Картинка">
               </picture>
             </div>
           </div>
@@ -196,13 +196,13 @@
 
         <section class="section certificates" id="certificates">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Сертификаты
               </h2>
             </div>
 
-            <div class="certificates-swiper">
+            <div class="certificates__swiper" data-swiper="certificates">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   @loop('partials/slides/certificates.html', [
@@ -239,13 +239,13 @@
 
         <section class="section partners">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 партнеры
               </h2>
             </div>
 
-            <div class="partners-swiper">
+            <div class="partners__swiper" data-swiper="partners">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   @loop('partials/slides/partners.html', [
@@ -270,28 +270,28 @@
 
         <section class="section contacts" id="contacts">
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
+            <div class="section__header">
+              <h2 class="section__title">
                 Где купить
               </h2>
             </div>
 
-            <div class="tabs contacts-tabs">
-              <div class="contacts-content">
-                <nav class="tabs-nav">
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button is-active">
+            <div class="tabs contacts__tabs" data-tabs="">
+              <div class="contacts__content">
+                <nav class="tabs__nav" data-tabs-nav="">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button is-active">
                     Москва
                   </button>
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button">
                     Санкт-Петербург
                   </button>
-                  <button type="button" class="btn btn-lg btn-light-100 tabs-nav-button">
+                  <button type="button" class="btn btn-lg btn-light-100 tabs__nav-button">
                     Екатеринбург
                   </button>
                 </nav>
-                <div class="tabs-content">
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
+                <div class="tabs__content" data-tabs-content="">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
                       @loop('partials/items/contacts.html', [
                         {
                           address: 'ул. Радиотехническая, д. 15, офис 203',
@@ -306,8 +306,8 @@
                       ])
                     </ul>
                   </div>
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
                       @loop('partials/items/contacts.html', [
                         {
                           address: 'ул. Радиотехническая, д. 15, офис 203',
@@ -322,8 +322,8 @@
                       ])
                     </ul>
                   </div>
-                  <div class="tabs-pane">
-                    <ul class="list-reset contacts-list">
+                  <div class="tabs__pane">
+                    <ul class="list-reset contacts__list">
                       @loop('partials/items/contacts.html', [
                         {
                           address: 'ул. Радиотехническая, д. 15, офис 203',
@@ -340,15 +340,15 @@
                   </div>
                 </div>
               </div>
-              <div class="contacts-map">
-                <div class="tabs-content">
-                  <div class="tabs-pane">
+              <div class="contacts__map">
+                <div class="tabs__content" data-tabs-content="">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
-                  <div class="tabs-pane">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
-                  <div class="tabs-pane">
+                  <div class="tabs__pane">
                     <div class="map"></div>
                   </div>
                 </div>

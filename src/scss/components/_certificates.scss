@@ -11,7 +11,7 @@
     }
   }
 
-  &-slide {
+  &__slide {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -21,9 +21,9 @@
     }
   }
 
-  &-picture {
+  &__picture {
 
-    .image {
+    &-image {
       display: block;
       box-shadow: var(--shadow);
 
@@ -33,7 +33,7 @@
     }
   }
 
-  &-title {
+  &__title {
     font-size: var(--fs-md);
     font-weight: 500;
 

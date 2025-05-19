@@ -7,9 +7,9 @@
     overflow: initial;
   }
 
-  &-picture {
+  &__picture {
 
-    .image {
+    &-image {
       display: block;
     }
   }

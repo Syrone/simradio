@@ -1,28 +1,28 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-header">
-        <div class="footer-header-contacts"
-          data-transfer-target="footer-header-contacts">
+    <div class="footer__top">
+      <div class="footer__header">
+        <div class="footer__header-contacts"
+          data-transfer-target="footer__header-contacts">
           <div class="footer-brand">
             @include('brand.html')
           </div>
         </div>
 
-        <p class="footer-description">
+        <p class="footer__description">
           Разработка и производство профессионального радиооборудования с 2005 года.
         </p>
       </div>
 
-      <nav class="footer-nav">
-        <ul class="list-reset footer-list">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+      <nav class="footer__nav">
+        <ul class="list-reset footer__list">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Контакты
             </h3>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
                 <svg>
                   <use xlink:href="img/icons/location.svg#svg-location"></use>
@@ -31,8 +31,8 @@
               <span class="text">г. Москва, ул. Радиотехническая, д. 15, офис 203</span>
             </div>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74951234567" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="tel:+74951234567" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
                 <svg>
                   <use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -41,8 +41,8 @@
               <span class="text">+7 (495) 123-45-67</span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <a href="mailto:info@simradio.ru" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="mailto:info@simradio.ru" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/email.svg#svg-email)">
                 <svg>
                   <use xlink:href="img/icons/email.svg#svg-email"></use>
@@ -53,14 +53,14 @@
           </li>
         </ul>
 
-        <ul class="list-reset footer-list">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+        <ul class="list-reset footer__list">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Сервисный центр
             </h3>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/location.svg#svg-location)">
                 <svg>
                   <use xlink:href="img/icons/location.svg#svg-location"></use>
@@ -69,8 +69,8 @@
               <span class="text">г. Москва, ул. Сервисная, д. 10</span>
             </div>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-list-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__list-link">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/phone.svg#svg-phone)">
                 <svg>
                   <use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -79,8 +79,8 @@
               <span class="text">+7 (495) 765-43-21</span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <div class="footer-list-text">
+          <li class="footer__list-item">
+            <div class="footer__list-text">
               <span class="icon icon-gradient" style="mask-image: url(img/icons/time.svg#svg-time)">
                 <svg>
                   <use xlink:href="img/icons/time.svg#svg-time"></use>
@@ -91,16 +91,16 @@
           </li>
         </ul>
 
-        <ul class="list-reset footer-list footer-contacts"
-          data-transfer-origin="footer-header-contacts"
+        <ul class="list-reset footer__list footer__contacts"
+          data-transfer-origin="footer__header-contacts"
           data-transfer-breakpoint="991.98">
-          <li class="footer-list-item">
-            <h3 class="footer-list-title">
+          <li class="footer__list-item">
+            <h3 class="footer__list-title">
               Мы в соцсетях
             </h3>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-contacts-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__contacts-link">
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/insta.svg#svg-insta"></use>
@@ -108,8 +108,8 @@
               </span>
             </a>
           </li>
-          <li class="footer-list-item">
-            <a href="tel:+74957654321" class="btn footer-contacts-link">
+          <li class="footer__list-item">
+            <a href="tel:+74957654321" class="btn footer__contacts-link">
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/youtube.svg#svg-youtube"></use>
@@ -121,23 +121,25 @@
       </nav>
     </div>
 
-    <div class="footer-bottom">
-      <p class="footer-copy">
+    <div class="footer__bottom">
+      <p class="footer__copy">
         © 2025 SimRadio. Вce права защищены.
       </p>
 
-      <nav class="footer-bottom-nav">
-        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+      <nav class="footer__bottom-nav">
+        <button type="button" class="btn btn-inherit footer__bottom-nav_link"
+          data-bs-toggle="modal"
+          data-bs-target="#policy">
           Политика конфиденциальности
-        </a>
-        <a href="#" class="btn btn-inherit footer-bottom-nav-link">
+        </button>
+        <a href="#" class="btn btn-inherit footer__bottom-nav_link">
           Юридическая информация
         </a>
 
-        <p class="footer-bottom-text">
-          <picture class="footer-bottom-text-logo">
+        <p class="footer__bottom-text">
+          <picture class="footer__bottom-text_logo">
             <source srcset="img/logo-2@2x.webp" type="image/webp">
-            <img loading="lazy" src="img/logo-2@2x.png" class="image" width="34" height="34" alt="Логотип ЭДД-Ю">
+            <img loading="lazy" src="img/logo-2@2x.png" class="footer__bottom-text_logo-image" width="34" height="34" alt="Логотип ЭДД-Ю">
           </picture>
 
           <span class="text">
