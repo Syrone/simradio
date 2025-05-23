@@ -11,6 +11,13 @@ function initTabs() {
     // При клике по кнопке таба
     buttons.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
+        setTimeout(() => {
+          document.querySelectorAll('.map')?.forEach((mapEl) => {
+            if (mapEl._yMapInstance) {
+              mapEl._yMapInstance.container.fitToViewport()
+            }
+          })
+        }, 100)
         // Активируем только нужный таб во всех nav
         navs.forEach(nav => {
           Array.from(nav.children).forEach((b, i) => {
